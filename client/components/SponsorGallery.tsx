@@ -130,27 +130,38 @@ export default function SponsorGallery() {
           </div>
         </div>
 
-        {/* Pagination Dots */}
-        <div className="flex justify-center space-x-3 mt-8">
+        {/* Enhanced Pagination Dots */}
+        <div className="flex justify-center space-x-4 mt-12">
           {sponsors.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${
                 currentSlide === index
-                  ? "bg-[#9CF185] ring-2 ring-[#9CF185]/30"
-                  : "bg-gray-400 hover:bg-gray-300"
+                  ? "bg-[#9CF185] ring-2 ring-[#9CF185]/30 scale-125"
+                  : "bg-white/30 hover:bg-white/50 hover:scale-110"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
 
-        {/* Slide Counter */}
-        <div className="text-center mt-4">
-          <span className="text-gray-400 font-poppins text-sm">
-            {currentSlide + 1} / {totalSlides}
-          </span>
+        {/* Enhanced Slide Counter with Progress */}
+        <div className="text-center mt-6">
+          <div className="inline-flex items-center space-x-4">
+            <span className="text-gray-300 font-poppins text-sm">
+              {currentSlide + 1} / {totalSlides}
+            </span>
+            <div className="w-24 h-1 bg-white/20 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-[#9CF185] to-[#60BE58] rounded-full transition-all duration-700"
+                style={{ width: `${((currentSlide + 1) / totalSlides) * 100}%` }}
+              />
+            </div>
+            <span className="text-[#9CF185] font-poppins text-xs">
+              {isHovered ? 'Paused' : 'Auto-sliding'}
+            </span>
+          </div>
         </div>
       </div>
     </div>
