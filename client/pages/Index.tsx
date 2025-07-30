@@ -9,7 +9,7 @@ import Testimonials from "../components/Testimonials";
 import Gallery from "../components/Gallery";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import FloatingActionButton from "../components/FloatingActionButton";
+import ChatBot from "../components/ChatBot";
 
 export default function Index() {
   return (
