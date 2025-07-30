@@ -65,6 +65,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "robotics-dark": "hsl(var(--robotics-dark-blue))",
+        "robotics-darker": "hsl(var(--robotics-darker-blue))",
+        "robotics-navy": "hsl(var(--robotics-navy))",
+        "robotics-green": "hsl(var(--robotics-green))",
+        "robotics-light-green": "hsl(var(--robotics-light-green))",
       },
       borderRadius: {
         lg: "var(--radius)",
