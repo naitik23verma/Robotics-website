@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import AnimatedCounter from './AnimatedCounter';
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AnimatedCounter from "./AnimatedCounter";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,10 +20,10 @@ export default function Achievements() {
   ];
 
   const stats = [
-    { number: 25, suffix: '+', label: 'Awards Won', icon: '🏆' },
-    { number: 500, suffix: '+', label: 'Participants Trained', icon: '👥' },
-    { number: 15, suffix: '+', label: 'Competitions Won', icon: '🥇' },
-    { number: 100, suffix: '%', label: 'Success Rate', icon: '📈' },
+    { number: 25, suffix: "+", label: "Awards Won", icon: "🏆" },
+    { number: 500, suffix: "+", label: "Participants Trained", icon: "👥" },
+    { number: 15, suffix: "+", label: "Competitions Won", icon: "🥇" },
+    { number: 100, suffix: "%", label: "Success Rate", icon: "📈" },
   ];
 
   useEffect(() => {
@@ -33,11 +33,12 @@ export default function Achievements() {
         trigger: sectionRef.current,
         start: "top 70%",
         onEnter: () => setIsVisible(true),
-        once: true
+        once: true,
       });
 
       // Animate stats cards
-      gsap.fromTo(statsRef.current?.children || [],
+      gsap.fromTo(
+        statsRef.current?.children || [],
         { y: 50, opacity: 0 },
         {
           y: 0,
@@ -48,13 +49,14 @@ export default function Achievements() {
           scrollTrigger: {
             trigger: statsRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
 
       // Animate achievements list
-      gsap.fromTo(achievementsRef.current?.children || [],
+      gsap.fromTo(
+        achievementsRef.current?.children || [],
         { x: -50, opacity: 0 },
         {
           x: 0,
@@ -65,9 +67,9 @@ export default function Achievements() {
           scrollTrigger: {
             trigger: achievementsRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
     }, sectionRef);
 
@@ -75,7 +77,10 @@ export default function Achievements() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#0F1B35] py-20 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="bg-[#0F1B35] py-20 relative overflow-hidden"
+    >
       {/* Enhanced background */}
       <div className="absolute inset-0">
         <div className="absolute top-10 right-10 w-64 h-64 bg-[#9CF185]/10 rounded-full filter blur-3xl"></div>
@@ -100,7 +105,10 @@ export default function Achievements() {
         </div>
 
         {/* Stats Grid */}
-        <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div
+          ref={statsRef}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        >
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -115,7 +123,9 @@ export default function Achievements() {
                   trigger={isVisible}
                 />
               </div>
-              <div className="text-white font-poppins text-sm">{stat.label}</div>
+              <div className="text-white font-poppins text-sm">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
@@ -128,7 +138,9 @@ export default function Achievements() {
                 <div className="w-16 h-16 bg-[#9CF185]/30 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">🏆</span>
                 </div>
-                <p className="text-white font-poppins text-sm">Competition Moments</p>
+                <p className="text-white font-poppins text-sm">
+                  Competition Moments
+                </p>
               </div>
             </div>
             <div className="bg-gradient-to-br from-[#AC0FB8]/20 to-[#578FD9]/20 h-60 rounded-xl border border-white/20 flex items-center justify-center group hover:scale-105 transition-all duration-300">
@@ -136,7 +148,9 @@ export default function Achievements() {
                 <div className="w-16 h-16 bg-[#AC0FB8]/30 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">🎯</span>
                 </div>
-                <p className="text-white font-poppins text-sm">Award Ceremonies</p>
+                <p className="text-white font-poppins text-sm">
+                  Award Ceremonies
+                </p>
               </div>
             </div>
           </div>
@@ -155,7 +169,9 @@ export default function Achievements() {
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-[#9CF185]/20 rounded-full mr-4 flex items-center justify-center group-hover:bg-[#9CF185]/30 transition-colors duration-300">
-                      <span className="text-lg">{achievement.split(' ')[0]}</span>
+                      <span className="text-lg">
+                        {achievement.split(" ")[0]}
+                      </span>
                     </div>
                     <span className="text-white font-poppins text-base leading-relaxed group-hover:text-[#9CF185] transition-colors duration-300">
                       {achievement.substring(2)}
@@ -168,12 +184,18 @@ export default function Achievements() {
             {/* CTA Button */}
             <div className="mt-8">
               <button
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
                 className="group bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white font-poppins font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
                 <span className="mr-2">🚀</span>
                 Join Our Success Story
-                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
+                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block">
+                  →
+                </span>
               </button>
             </div>
           </div>

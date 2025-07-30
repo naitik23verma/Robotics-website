@@ -7,32 +7,43 @@ export default function Projects() {
     {
       id: 1,
       title: "Autonomous Drone",
-      description: "AI-powered surveillance drone with object detection capabilities",
-      fullDescription: "Our autonomous drone project combines computer vision, machine learning, and advanced flight control systems. The drone can navigate autonomously, detect and track objects in real-time, and provide surveillance capabilities for security applications. Built with Python, OpenCV, and TensorFlow.",
+      description:
+        "AI-powered surveillance drone with object detection capabilities",
+      fullDescription:
+        "Our autonomous drone project combines computer vision, machine learning, and advanced flight control systems. The drone can navigate autonomously, detect and track objects in real-time, and provide surveillance capabilities for security applications. Built with Python, OpenCV, and TensorFlow.",
       technologies: ["Python", "OpenCV", "TensorFlow", "ROS", "Arduino"],
       status: "Completed",
       team: "5 members",
-      duration: "6 months"
+      duration: "6 months",
     },
     {
       id: 2,
       title: "Smart Home Assistant Robot",
-      description: "Voice-controlled home automation robot with AI capabilities",
-      fullDescription: "An intelligent home assistant robot that can understand voice commands, control smart home devices, provide weather updates, and assist with daily tasks. Features natural language processing, computer vision for object recognition, and IoT integration.",
-      technologies: ["Python", "NLP", "IoT", "Raspberry Pi", "Voice Recognition"],
+      description:
+        "Voice-controlled home automation robot with AI capabilities",
+      fullDescription:
+        "An intelligent home assistant robot that can understand voice commands, control smart home devices, provide weather updates, and assist with daily tasks. Features natural language processing, computer vision for object recognition, and IoT integration.",
+      technologies: [
+        "Python",
+        "NLP",
+        "IoT",
+        "Raspberry Pi",
+        "Voice Recognition",
+      ],
       status: "In Progress",
       team: "4 members",
-      duration: "8 months"
+      duration: "8 months",
     },
     {
       id: 3,
       title: "Medical Assistance Robot",
       description: "Healthcare robot designed to assist medical professionals",
-      fullDescription: "A specialized robot designed for healthcare environments, capable of delivering medications, monitoring patients, and assisting medical staff. Includes contactless vital sign monitoring, autonomous navigation in hospital environments, and integration with medical databases.",
+      fullDescription:
+        "A specialized robot designed for healthcare environments, capable of delivering medications, monitoring patients, and assisting medical staff. Includes contactless vital sign monitoring, autonomous navigation in hospital environments, and integration with medical databases.",
       technologies: ["C++", "ROS", "Computer Vision", "Sensors", "Database"],
       status: "Planning",
       team: "6 members",
-      duration: "12 months"
+      duration: "12 months",
     },
   ];
 
@@ -91,11 +102,15 @@ export default function Projects() {
               {/* Project Info */}
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className={`px-3 py-1 rounded-full text-xs font-poppins ${
-                    project.status === 'Completed' ? 'bg-green-500/20 text-green-400' :
-                    project.status === 'In Progress' ? 'bg-yellow-500/20 text-yellow-400' :
-                    'bg-blue-500/20 text-blue-400'
-                  }`}>
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-poppins ${
+                      project.status === "Completed"
+                        ? "bg-green-500/20 text-green-400"
+                        : project.status === "In Progress"
+                          ? "bg-yellow-500/20 text-yellow-400"
+                          : "bg-blue-500/20 text-blue-400"
+                    }`}
+                  >
                     {project.status}
                   </span>
                   <span className="text-[#9CF185] font-poppins text-xs">
@@ -129,7 +144,7 @@ export default function Projects() {
           <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
             <div className="bg-[#121C37] border border-[#9CF185]/30 rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
               {(() => {
-                const project = projects.find(p => p.id === selectedProject);
+                const project = projects.find((p) => p.id === selectedProject);
                 if (!project) return null;
 
                 return (
@@ -151,17 +166,23 @@ export default function Projects() {
                     <div className="grid grid-cols-2 gap-4 mb-6">
                       <div className="bg-white/5 rounded-lg p-4">
                         <p className="text-gray-400 text-sm mb-1">Status</p>
-                        <span className={`px-3 py-1 rounded-full text-sm font-poppins ${
-                          project.status === 'Completed' ? 'bg-green-500/20 text-green-400' :
-                          project.status === 'In Progress' ? 'bg-yellow-500/20 text-yellow-400' :
-                          'bg-blue-500/20 text-blue-400'
-                        }`}>
+                        <span
+                          className={`px-3 py-1 rounded-full text-sm font-poppins ${
+                            project.status === "Completed"
+                              ? "bg-green-500/20 text-green-400"
+                              : project.status === "In Progress"
+                                ? "bg-yellow-500/20 text-yellow-400"
+                                : "bg-blue-500/20 text-blue-400"
+                          }`}
+                        >
                           {project.status}
                         </span>
                       </div>
                       <div className="bg-white/5 rounded-lg p-4">
                         <p className="text-gray-400 text-sm mb-1">Team Size</p>
-                        <p className="text-white font-semibold">{project.team}</p>
+                        <p className="text-white font-semibold">
+                          {project.team}
+                        </p>
                       </div>
                     </div>
 
@@ -196,7 +217,9 @@ export default function Projects() {
                     <div className="border-t border-gray-600 pt-4">
                       <div className="flex items-center justify-between">
                         <span className="text-gray-400">Project Duration:</span>
-                        <span className="text-white font-semibold">{project.duration}</span>
+                        <span className="text-white font-semibold">
+                          {project.duration}
+                        </span>
                       </div>
                     </div>
                   </div>
