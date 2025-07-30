@@ -68,7 +68,7 @@ export default function ChatBot() {
       "events", "competition", "robomax", "automax", "workshop", "activities"
     ],
     joining: [
-      "join", "how to join", "membership", "register", "become member"
+      "join", "how to join", "membership", "register", "become member", "selection process", "rounds", "qualify", "interview", "hr"
     ],
     projects: [
       "projects", "robots", "what do you build", "work", "research"
@@ -78,6 +78,15 @@ export default function ChatBot() {
     ],
     team: [
       "team", "members", "faculty", "coordinators", "who runs"
+    ],
+    prizes: [
+      "prizes", "awards", "rewards", "prize collection", "what can i win", "competitions prizes"
+    ],
+    skills: [
+      "skills", "requirements", "what skills", "programming", "technical", "prerequisites"
+    ],
+    fees: [
+      "fees", "cost", "money", "payment", "charges", "registration fee"
     ]
   };
 
