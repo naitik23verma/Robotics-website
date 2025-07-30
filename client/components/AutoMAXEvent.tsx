@@ -56,8 +56,30 @@ export default function AutoMAXEvent() {
               exciting prizes.
             </p>
 
-            <button className="bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white font-poppins font-medium px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">
-              Register Now
+            <button
+              onClick={handleRegistration}
+              disabled={isRegistering || registrationSuccess}
+              className={`group bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white font-poppins font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl disabled:opacity-70 disabled:cursor-not-allowed ${
+                isRegistering ? 'animate-pulse' : ''
+              }`}
+            >
+              {isRegistering ? (
+                <div className="flex items-center">
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
+                  Registering...
+                </div>
+              ) : registrationSuccess ? (
+                <div className="flex items-center">
+                  <span className="mr-2">✅</span>
+                  Registration Successful!
+                </div>
+              ) : (
+                <div className="flex items-center">
+                  <span className="mr-2">🎯</span>
+                  Register Now
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+                </div>
+              )}
             </button>
 
             {/* Sponsor logos */}
