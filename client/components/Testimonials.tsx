@@ -6,72 +6,159 @@ import SponsorGallery from "./SponsorGallery";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Testimonials() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
-  const testimonialsRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
 
   const testimonials = [
     {
       id: 1,
       name: "Rahul Sharma",
-      role: "Alumni, Software Engineer at Google",
-      image: "👨���💻",
+      role: "Software Engineer",
+      company: "Google",
+      image: "👨‍💻",
       quote: "The Robotics Club at MANIT was the foundation of my career. The hands-on experience with cutting-edge technology and the collaborative environment taught me problem-solving skills that I use every day at Google.",
       rating: 5,
-      year: "Class of 2021"
+      year: "Class of 2021",
+      category: "Alumni"
     },
     {
       id: 2,
       name: "Priya Singh",
-      role: "Final Year Student, Robotics Team Lead",
+      role: "Team Lead",
+      company: "Current Student",
       image: "👩‍🔬",
-      quote: "Being part of this club has been transformational. From building my first robot to leading teams in national competitions, every moment has been a learning experience. The mentorship here is unparalleled.",
+      quote: "Being part of this club has been transformational. From building my first robot to leading teams in national competitions, every moment has been a learning experience.",
       rating: 5,
-      year: "Current Student"
+      year: "Final Year",
+      category: "Current Student"
     },
     {
       id: 3,
       name: "Dr. Arjun Patel",
-      role: "Robotics Engineer, ISRO",
+      role: "Robotics Engineer",
+      company: "ISRO",
       image: "🚀",
-      quote: "The technical foundation I gained at MANIT's Robotics Club directly contributed to my work at ISRO. The club's emphasis on innovation and practical application prepared me for real-world challenges in space technology.",
+      quote: "The technical foundation I gained at MANIT's Robotics Club directly contributed to my work at ISRO. The club's emphasis on innovation prepared me for real-world challenges.",
       rating: 5,
-      year: "Class of 2019"
+      year: "Class of 2019",
+      category: "Alumni"
     },
     {
       id: 4,
       name: "Sneha Gupta",
-      role: "AI Research Scientist, Microsoft",
+      role: "AI Research Scientist",
+      company: "Microsoft",
       image: "🤖",
-      quote: "The interdisciplinary approach of the club, combining robotics with AI and machine learning, gave me a unique perspective that's invaluable in my current research at Microsoft. Truly grateful for this experience.",
+      quote: "The interdisciplinary approach of the club, combining robotics with AI and machine learning, gave me a unique perspective that's invaluable in my current research.",
       rating: 5,
-      year: "Class of 2020"
+      year: "Class of 2020",
+      category: "Alumni"
+    },
+    {
+      id: 5,
+      name: "Amit Kumar",
+      role: "Mechanical Engineer",
+      company: "Tesla",
+      image: "⚡",
+      quote: "Working on autonomous vehicle projects in the club directly led to my career in automotive innovation. The practical experience was unmatched.",
+      rating: 5,
+      year: "Class of 2022",
+      category: "Alumni"
+    },
+    {
+      id: 6,
+      name: "Riya Mehta",
+      role: "IoT Developer",
+      company: "Amazon",
+      image: "🌐",
+      quote: "The club taught me to think beyond textbooks. Building real IoT solutions and competing nationally boosted my confidence and technical skills tremendously.",
+      rating: 5,
+      year: "Class of 2021",
+      category: "Alumni"
+    },
+    {
+      id: 7,
+      name: "Vikash Yadav",
+      role: "Project Coordinator",
+      company: "Current Student",
+      image: "🎯",
+      quote: "Coordinating club projects has enhanced my leadership and technical management skills. The mentorship from seniors is exceptional.",
+      rating: 5,
+      year: "Third Year",
+      category: "Current Student"
+    },
+    {
+      id: 8,
+      name: "Prof. Deepak Singh",
+      role: "Faculty Advisor",
+      company: "MANIT",
+      image: "👨‍🏫",
+      quote: "It's amazing to see students evolve from curious beginners to confident engineers. The club provides the perfect platform for practical learning.",
+      rating: 5,
+      year: "Faculty",
+      category: "Faculty"
+    },
+    {
+      id: 9,
+      name: "Anjali Sharma",
+      role: "Embedded Systems Engineer",
+      company: "Bosch",
+      image: "🔧",
+      quote: "From microcontroller programming to system design, everything I learned in the club is what I use daily in my job at Bosch.",
+      rating: 5,
+      year: "Class of 2020",
+      category: "Alumni"
+    },
+    {
+      id: 10,
+      name: "Karan Joshi",
+      role: "Startup Founder",
+      company: "TechBot Solutions",
+      image: "💡",
+      quote: "The entrepreneurial spirit and innovation mindset I developed in the club helped me start my own robotics company after graduation.",
+      rating: 5,
+      year: "Class of 2019",
+      category: "Alumni"
+    },
+    {
+      id: 11,
+      name: "Neha Patel",
+      role: "Research Assistant",
+      company: "Current Student",
+      image: "🔬",
+      quote: "Working on cutting-edge research projects with club members has opened doors to national conferences and publications.",
+      rating: 5,
+      year: "Second Year",
+      category: "Current Student"
+    },
+    {
+      id: 12,
+      name: "Rohit Agarwal",
+      role: "Controls Engineer",
+      company: "SpaceX",
+      image: "🛰️",
+      quote: "The control systems and automation projects in the club gave me the foundation to work on rocket guidance systems at SpaceX.",
+      rating: 5,
+      year: "Class of 2021",
+      category: "Alumni"
     }
   ];
-
-  // Auto-advance testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
 
   // GSAP animations
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate testimonials on scroll
-      gsap.fromTo(testimonialsRef.current?.children || [],
-        { y: 50, opacity: 0 },
+      // Animate cards on scroll
+      gsap.fromTo(cardsRef.current?.children || [],
+        { y: 60, opacity: 0, scale: 0.9 },
         {
           y: 0,
           opacity: 1,
+          scale: 1,
           duration: 0.8,
-          stagger: 0.2,
+          stagger: 0.1,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: testimonialsRef.current,
+            trigger: cardsRef.current,
             start: "top 80%",
             toggleActions: "play none none reverse"
           }
@@ -82,20 +169,25 @@ export default function Testimonials() {
     return () => ctx.revert();
   }, []);
 
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
-      <span key={i} className={`text-lg ${i < rating ? 'text-yellow-400' : 'text-gray-400'}`}>
+      <span key={i} className={`text-sm ${i < rating ? 'text-yellow-400' : 'text-gray-500'}`}>
         ⭐
       </span>
     ));
+  };
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'Alumni':
+        return 'from-[#9CF185] to-[#60BE58]';
+      case 'Current Student':
+        return 'from-[#578FD9] to-[#AC0FB8]';
+      case 'Faculty':
+        return 'from-[#AC0FB8] to-[#578FD9]';
+      default:
+        return 'from-[#9CF185] to-[#60BE58]';
+    }
   };
 
   return (
@@ -124,122 +216,109 @@ export default function Testimonials() {
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] mx-auto rounded-full mb-4"></div>
           <p className="text-gray-300 font-poppins text-lg max-w-2xl mx-auto">
-            Hear from our amazing community of students, alumni, and professionals who've been part of our robotics journey
+            Hear from our amazing community of students, alumni, faculty, and professionals who've been part of our robotics journey
           </p>
         </div>
 
-        {/* Main Featured Testimonial */}
-        <div className="mb-16">
-          <div className="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-md rounded-3xl border border-white/20 p-8 md:p-12 max-w-4xl mx-auto relative overflow-hidden">
-            {/* Background pattern */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#9CF185]/10 rounded-full filter blur-2xl"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#AC0FB8]/10 rounded-full filter blur-2xl"></div>
-            
-            <div className="relative z-10">
-              {/* Quote icon */}
-              <div className="text-6xl text-[#9CF185]/30 mb-6 font-serif">"</div>
-              
-              {/* Main quote */}
-              <blockquote className="text-white text-xl md:text-2xl font-medium leading-relaxed mb-8 font-inter">
-                {testimonials[currentTestimonial].quote}
-              </blockquote>
-              
-              {/* Rating */}
-              <div className="flex justify-center mb-6">
-                {renderStars(testimonials[currentTestimonial].rating)}
-              </div>
-              
-              {/* Author info */}
-              <div className="flex items-center justify-center space-x-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#9CF185] to-[#60BE58] rounded-full flex items-center justify-center text-2xl">
-                  {testimonials[currentTestimonial].image}
-                </div>
-                <div className="text-left">
-                  <h4 className="text-white font-poppins text-lg font-bold">
-                    {testimonials[currentTestimonial].name}
-                  </h4>
-                  <p className="text-[#9CF185] font-poppins text-sm">
-                    {testimonials[currentTestimonial].role}
-                  </p>
-                  <p className="text-gray-400 font-poppins text-xs">
-                    {testimonials[currentTestimonial].year}
-                  </p>
-                </div>
-              </div>
-              
-              {/* Navigation */}
-              <div className="flex items-center justify-center space-x-4 mt-8">
-                <button
-                  onClick={prevTestimonial}
-                  className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center hover:bg-[#9CF185]/20 transition-all duration-300 group"
-                >
-                  <svg className="w-5 h-5 text-white group-hover:text-[#9CF185]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </button>
-                
-                {/* Dots indicator */}
-                <div className="flex space-x-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentTestimonial(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        currentTestimonial === index 
-                          ? 'bg-[#9CF185] scale-125' 
-                          : 'bg-white/30 hover:bg-white/50'
-                      }`}
-                    />
-                  ))}
-                </div>
-                
-                <button
-                  onClick={nextTestimonial}
-                  className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center hover:bg-[#9CF185]/20 transition-all duration-300 group"
-                >
-                  <svg className="w-5 h-5 text-white group-hover:text-[#9CF185]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="text-3xl font-bold text-[#9CF185] mb-2">500+</div>
+            <div className="text-gray-300 text-sm">Happy Members</div>
+          </div>
+          <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="text-3xl font-bold text-[#578FD9] mb-2">50+</div>
+            <div className="text-gray-300 text-sm">Successful Projects</div>
+          </div>
+          <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="text-3xl font-bold text-[#AC0FB8] mb-2">25+</div>
+            <div className="text-gray-300 text-sm">Awards Won</div>
+          </div>
+          <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="text-3xl font-bold text-[#9CF185] mb-2">4.9/5</div>
+            <div className="text-gray-300 text-sm">Average Rating</div>
           </div>
         </div>
 
         {/* Testimonial Cards Grid */}
-        <div ref={testimonialsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-          {testimonials.filter((_, index) => index !== currentTestimonial).slice(0, 3).map((testimonial, index) => (
+        <div ref={cardsRef} className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20">
+          {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="group bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:bg-white/15 hover:border-[#9CF185]/30 transition-all duration-300 cursor-pointer"
-              onClick={() => setCurrentTestimonial(testimonials.findIndex(t => t.id === testimonial.id))}
+              className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl border border-white/20 p-6 hover:from-white/15 hover:to-white/10 hover:border-[#9CF185]/30 hover:shadow-2xl hover:shadow-[#9CF185]/10 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden"
             >
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#9CF185] to-[#60BE58] rounded-full flex items-center justify-center text-lg">
-                  {testimonial.image}
+              {/* Background pattern */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#9CF185]/5 to-transparent rounded-full filter blur-xl"></div>
+              
+              {/* Category badge */}
+              <div className={`absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(testimonial.category)} text-white`}>
+                {testimonial.category}
+              </div>
+
+              <div className="relative z-10">
+                {/* Avatar and basic info */}
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className={`w-14 h-14 bg-gradient-to-br ${getCategoryColor(testimonial.category)} rounded-full flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300`}>
+                    {testimonial.image}
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-white font-poppins text-sm font-bold group-hover:text-[#9CF185] transition-colors">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-[#9CF185] font-poppins text-xs font-medium">
+                      {testimonial.role}
+                    </p>
+                    <p className="text-gray-400 font-poppins text-xs">
+                      {testimonial.company}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-white font-poppins text-sm font-bold group-hover:text-[#9CF185] transition-colors">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-gray-400 font-poppins text-xs">
-                    {testimonial.role.split(',')[0]}
+                
+                {/* Quote */}
+                <div className="mb-4">
+                  <div className="text-2xl text-[#9CF185]/30 mb-2">"</div>
+                  <p className="text-gray-300 font-poppins text-sm leading-relaxed line-clamp-4 group-hover:text-white transition-colors">
+                    {testimonial.quote}
                   </p>
                 </div>
-              </div>
-              
-              <p className="text-gray-300 font-poppins text-sm leading-relaxed mb-4 line-clamp-3">
-                {testimonial.quote.substring(0, 120)}...
-              </p>
-              
-              <div className="flex items-center justify-between">
-                <div className="flex space-x-1">
-                  {renderStars(testimonial.rating).slice(0, 5)}
+                
+                {/* Rating and year */}
+                <div className="flex items-center justify-between">
+                  <div className="flex space-x-1">
+                    {renderStars(testimonial.rating)}
+                  </div>
+                  <span className="text-gray-500 text-xs font-medium">
+                    {testimonial.year}
+                  </span>
                 </div>
-                <span className="text-[#9CF185] text-xs font-medium">Read More →</span>
+
+                {/* Hover effect overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#9CF185]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mb-20">
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-3xl border border-white/20 p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4 font-montserrat">
+              Ready to Join Our Community?
+            </h3>
+            <p className="text-gray-300 mb-6 font-poppins">
+              Become part of MANIT's most innovative club and start your journey in robotics and technology.
+            </p>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-gradient-to-r from-[#9CF185] to-[#60BE58] text-[#0F1A35] px-8 py-3 rounded-full font-bold hover:shadow-2xl hover:shadow-[#9CF185]/25 hover:scale-105 transition-all duration-300"
+            >
+              Get Started Today
+            </button>
+          </div>
         </div>
 
         {/* Enhanced Sponsors section */}
