@@ -21,12 +21,13 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "dotenv": "^17.2.0",
     "express": "^4.18.2",
     "gsap": "^3.13.0",
-    "zod": "^3.23.8",
     "vite": "^6.2.2",
-    "@vitejs/plugin-react-swc": "^3.5.0"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@hookform/resolvers": "^3.9.0",
