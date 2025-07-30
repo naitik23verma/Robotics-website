@@ -90,11 +90,17 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        <h1 className="text-white font-taviraj text-4xl md:text-5xl font-bold leading-tight mb-6">
+        <h1
+          ref={titleRef}
+          className="text-white font-taviraj text-4xl md:text-5xl font-bold leading-tight mb-6"
+        >
           Welcome to Robotics Club – MANIT Bhopal
         </h1>
-        
-        <p className="text-white font-montserrat text-xl md:text-2xl font-semibold">
+
+        <p
+          ref={subtitleRef}
+          className="text-white font-montserrat text-xl md:text-2xl font-semibold"
+        >
           Where Innovation Meets Engineering
         </p>
       </div>
