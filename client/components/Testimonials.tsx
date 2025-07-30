@@ -43,45 +43,7 @@ export default function Testimonials() {
         </div>
 
         {/* Sponsors section */}
-        <div className="text-center mb-12">
-          <h2 className="text-[#9CF185] font-montserrat text-3xl font-bold mb-3">
-            Our Past Sponsors
-          </h2>
-          <div className="w-24 h-1 bg-gray-300 mx-auto"></div>
-        </div>
-
-        <div className="flex justify-between items-center">
-          {/* Previous button */}
-          <button className="w-8 h-8 bg-white rounded-full border border-gray-300 shadow-lg flex items-center justify-center">
-            <div className="w-2 h-2 border-t-4 border-r-8 border-b-4 border-transparent border-r-black"></div>
-          </button>
-
-          {/* Sponsor logos */}
-          <div className="flex space-x-6">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div
-                key={i}
-                className="w-36 h-16 bg-gray-300 border border-gray-300 rounded flex items-center justify-center"
-              >
-                <div className="w-20 h-8 bg-gray-300 rounded"></div>
-              </div>
-            ))}
-          </div>
-
-          {/* Next button */}
-          <button className="w-8 h-8 bg-white rounded-full border border-gray-300 shadow-lg flex items-center justify-center">
-            <div className="w-2 h-2 border-t-4 border-l-8 border-b-4 border-transparent border-l-black"></div>
-          </button>
-        </div>
-
-        {/* Pagination dots */}
-        <div className="flex justify-center space-x-2 mt-12">
-          <div className="w-3 h-3 bg-gray-400 rounded-full border-2 border-gray-600"></div>
-          <div className="w-3 h-3 bg-gray-300 rounded-full border border-gray-300"></div>
-          <div className="w-3 h-3 bg-gray-300 rounded-full border border-gray-300"></div>
-          <div className="w-3 h-3 bg-gray-300 rounded-full border border-gray-300"></div>
-          <div className="w-3 h-3 bg-gray-300 rounded-full border border-gray-300"></div>
-        </div>
+        <SponsorGallery />
       </div>
     </section>
   );
