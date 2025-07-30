@@ -62,16 +62,25 @@ export default function SponsorGallery() {
 
   return (
     <div className="w-full">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h2 className="text-[#9CF185] font-montserrat text-3xl font-bold mb-3">
-          Our Past Sponsors
+      {/* Enhanced Header */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <span className="bg-gradient-to-r from-[#9CF185] to-[#60BE58] bg-clip-text text-transparent font-montserrat">
+            Our Past Sponsors
+          </span>
         </h2>
-        <div className="w-24 h-1 bg-gray-300 mx-auto"></div>
+        <div className="w-32 h-1 bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] mx-auto rounded-full mb-4"></div>
+        <p className="text-gray-300 font-poppins text-lg max-w-2xl mx-auto">
+          Proud to be supported by leading technology companies and organizations
+        </p>
       </div>
 
-      {/* Gallery Container */}
-      <div className="relative max-w-6xl mx-auto">
+      {/* Enhanced Gallery Container */}
+      <div
+        className="relative max-w-6xl mx-auto"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
