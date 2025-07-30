@@ -81,23 +81,23 @@ export default function SponsorGallery() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Navigation Buttons */}
+        {/* Enhanced Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full border border-gray-300 shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-2xl flex items-center justify-center hover:bg-[#9CF185]/20 hover:border-[#9CF185]/40 transition-all duration-300 group"
           aria-label="Previous sponsors"
         >
-          <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-6 h-6 text-white group-hover:text-[#9CF185] transition-colors" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
           </svg>
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full border border-gray-300 shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-2xl flex items-center justify-center hover:bg-[#9CF185]/20 hover:border-[#9CF185]/40 transition-all duration-300 group"
           aria-label="Next sponsors"
         >
-          <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-6 h-6 text-white group-hover:text-[#9CF185] transition-colors" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
           </svg>
         </button>
