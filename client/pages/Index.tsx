@@ -33,6 +33,7 @@ export default function Index() {
         <Contact />
       </div>
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 }
