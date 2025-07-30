@@ -1,3 +1,5 @@
+import SponsorGallery from "./SponsorGallery";
+
 export default function Testimonials() {
   return (
     <section className="bg-[#0F1A35] py-16 relative overflow-hidden">
