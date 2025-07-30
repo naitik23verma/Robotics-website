@@ -15,14 +15,22 @@ export default function Index() {
     <div className="min-h-screen bg-[#0F1B35]">
       <Navigation />
       <Hero />
-      <AboutUs />
+      <div id="about">
+        <AboutUs />
+      </div>
       <AutoMAXEvent />
       <PastEvents />
-      <Achievements />
-      <Projects />
+      <div id="achievements">
+        <Achievements />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
       <Testimonials />
       <Gallery />
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
       <Footer />
     </div>
   );
