@@ -128,12 +128,6 @@ export default function Contact() {
                     ? "Free registration available for MANIT students"
                     : "Thank you for being a member"}
                 </p>
-                <Link
-                  to="/prizes"
-                  className="inline-block mt-3 bg-green-500 text-white font-poppins font-medium px-4 py-2 rounded-lg hover:bg-green-600 transition-colors text-sm"
-                >
-                  View Prize Collection
-                </Link>
               </div>
             )}
 
