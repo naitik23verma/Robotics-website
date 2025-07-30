@@ -1,19 +1,38 @@
+import { useState } from "react";
+
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+
   const projects = [
     {
+      id: 1,
       title: "Autonomous Drone",
-      description:
-        "AI-powered surveillance drone with object detection capabilities",
+      description: "AI-powered surveillance drone with object detection capabilities",
+      fullDescription: "Our autonomous drone project combines computer vision, machine learning, and advanced flight control systems. The drone can navigate autonomously, detect and track objects in real-time, and provide surveillance capabilities for security applications. Built with Python, OpenCV, and TensorFlow.",
+      technologies: ["Python", "OpenCV", "TensorFlow", "ROS", "Arduino"],
+      status: "Completed",
+      team: "5 members",
+      duration: "6 months"
     },
     {
-      title: "Smart Robot",
-      description:
-        "AI-powered surveillance drone with object detection capabilities",
+      id: 2,
+      title: "Smart Home Assistant Robot",
+      description: "Voice-controlled home automation robot with AI capabilities",
+      fullDescription: "An intelligent home assistant robot that can understand voice commands, control smart home devices, provide weather updates, and assist with daily tasks. Features natural language processing, computer vision for object recognition, and IoT integration.",
+      technologies: ["Python", "NLP", "IoT", "Raspberry Pi", "Voice Recognition"],
+      status: "In Progress",
+      team: "4 members",
+      duration: "8 months"
     },
     {
-      title: "Line Following Bot",
-      description:
-        "AI-powered surveillance drone with object detection capabilities",
+      id: 3,
+      title: "Medical Assistance Robot",
+      description: "Healthcare robot designed to assist medical professionals",
+      fullDescription: "A specialized robot designed for healthcare environments, capable of delivering medications, monitoring patients, and assisting medical staff. Includes contactless vital sign monitoring, autonomous navigation in hospital environments, and integration with medical databases.",
+      technologies: ["C++", "ROS", "Computer Vision", "Sensors", "Database"],
+      status: "Planning",
+      team: "6 members",
+      duration: "12 months"
     },
   ];
 
