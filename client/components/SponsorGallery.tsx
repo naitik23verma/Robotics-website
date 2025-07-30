@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 
 export default function SponsorGallery() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+  const [isHovered, setIsHovered] = useState(false);
+
   // Sample sponsor data - you can replace with actual sponsor logos
   const sponsors = [
     // Slide 1
