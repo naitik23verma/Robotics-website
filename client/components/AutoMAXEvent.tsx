@@ -1,12 +1,41 @@
-export default function AutoMAXEvent() {
-  return (
-    <section className="bg-[#0F1B35] py-16">
-      <div className="max-w-7xl mx-auto px-4 lg:px-20">
-        <h2 className="text-white font-poppins text-3xl font-normal text-center mb-12">
-          Upcoming Event: AutoMAX
-        </h2>
+import { useState } from "react";
 
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+export default function AutoMAXEvent() {
+  const [isRegistering, setIsRegistering] = useState(false);
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
+
+  const handleRegistration = () => {
+    setIsRegistering(true);
+
+    // Simulate registration process
+    setTimeout(() => {
+      setIsRegistering(false);
+      setRegistrationSuccess(true);
+
+      // Reset success message after 3 seconds
+      setTimeout(() => {
+        setRegistrationSuccess(false);
+      }, 3000);
+    }, 2000);
+  };
+
+  return (
+    <section id="events" className="bg-[#0F1B35] py-20 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[#9CF185] rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#AC0FB8] rounded-full filter blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-20">
+        <div className="text-center mb-16">
+          <h2 className="text-white font-poppins text-4xl md:text-5xl font-bold mb-4">
+            Upcoming Event: <span className="bg-gradient-to-r from-[#9CF185] to-[#60BE58] bg-clip-text text-transparent">AutoMAX</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] mx-auto rounded-full"></div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Event details */}
           <div className="bg-black bg-opacity-10 backdrop-blur-md rounded-lg border border-gray-200 border-opacity-80 p-8">
             <div className="mb-6">
