@@ -105,8 +105,8 @@ export default function ChatBot() {
       "Our events are designed to challenge your technical skills and creativity. From beginner-friendly workshops to advanced competitions, we have something for everyone!"
     ],
     joining: [
-      "🚀 To join MANIT Robotics Club:\n\n1. Attend our recruitment drives (usually at semester start)\n2. Fill the membership form\n3. Participate in our orientation session\n4. Start working on projects with senior mentors\n\nNo prior robotics experience required - just passion to learn!",
-      "We welcome students from all branches! Our club provides complete training from basics to advanced robotics. Contact us through the contact section for more details!"
+      "🚀 **How to become part of MANIT Robotics Club:**\n\n**3-Round Selection Process:**\n\n**Round 1: Task Assignment** 📝\n• Technical task related to programming/robotics\n• Problem-solving assignment\n• Usually completed within 48-72 hours\n\n**Round 2: Technical Interview** 💻\n• Discussion of your submitted task\n• Technical questions on programming, electronics\n• Project ideas and innovation thinking\n\n**Round 3: HR Interview** 👥\n• Communication skills assessment\n• Team collaboration abilities\n• Commitment and availability discussion\n\n**Important Requirements:**\n• Open to all MANIT students (any branch)\n• No prior robotics experience required\n• Passion for technology and learning\n• Time commitment for projects and events\n\n**When to Apply:**\n• Recruitment drives: Start of each semester\n• Special drives before major events\n• Mid-semester openings (occasionally)\n\nReady to start your robotics journey? 🤖",
+      "**Joining Process Details:**\n\nOur selection ensures we get passionate, dedicated members who can contribute effectively to the club.\n\n**What we look for:**\n• Problem-solving mindset\n• Willingness to learn new technologies\n• Team collaboration skills\n• Commitment to club activities\n• Innovation and creativity\n\n**After Selection:**\n• Orientation session with senior members\n• Assignment to project teams\n• Mentorship from experienced members\n• Access to club resources and lab\n• Participation in workshops and competitions\n\nThe journey is challenging but incredibly rewarding! 🌟"
     ],
     projects: [
       "🔧 Our projects include:\n\n• Autonomous robots\n• Line following bots\n• Gesture-controlled vehicles\n• IoT-based automation\n• AI and ML applications\n• Drone technology\n• Industrial automation systems",
@@ -119,6 +119,18 @@ export default function ChatBot() {
     team: [
       "👥 Our team consists of:\n\n• Faculty Coordinators\n• Student Coordinators\n• Core Team Members\n• Active Club Members\n\nCheck our Team section to meet our amazing coordinators and members who make everything possible!",
       "We have an experienced team of faculty advisors and passionate student leaders who guide club activities and mentor new members."
+    ],
+    prizes: [
+      "🏆 **Club Prizes & Rewards:**\n\n**Competition Prizes:**\n• RoboMAX winners: Cash prizes + certificates\n• AutoMAX champions: Trophies + internship opportunities\n• Project competitions: Gadgets + recognition\n\n**Member Benefits:**\n• Certificate of participation\n• Skill development certificates\n• Internship recommendations\n• Industry connections\n• Resume enhancement\n\n**Achievement Rewards:**\n• Best project awards\n• Innovation recognition\n• Leadership certificates\n• Technical excellence awards\n\nVisit our Prizes page for complete details! 🎁",
+      "We believe in recognizing talent and hard work! Our prize system motivates members to excel and provides tangible rewards for achievements. Check the Prizes section for current offerings!"
+    ],
+    skills: [
+      "💻 **Skills You'll Develop:**\n\n**Technical Skills:**\n• Programming (C++, Python, Arduino)\n• Electronics and circuit design\n• 3D modeling and printing\n• Sensor integration\n• Microcontroller programming\n• AI/ML basics\n\n**Soft Skills:**\n• Project management\n• Team leadership\n• Problem-solving\n• Technical presentation\n• Innovation thinking\n\n**No Prerequisites Required!**\nWe teach everything from scratch. Just bring enthusiasm and willingness to learn! 🚀",
+      "Don't worry about not having prior experience! Our senior members and faculty provide comprehensive training. We start with basics and gradually move to advanced concepts."
+    ],
+    fees: [
+      "💰 **Club Membership Details:**\n\n**Registration Fee:** ₹500 (One-time)\n• Includes club T-shirt\n• Access to all workshops\n• Lab facility usage\n• Certificate of membership\n\n**Additional Costs:**\n• Project components (shared among team)\n• Competition participation (varies)\n• Optional advanced workshops\n\n**Financial Support:**\n• Scholarships available for deserving students\n• Installment options for fees\n• Merit-based fee waivers\n\nInvestment in your future! The skills you gain are worth much more. 📈",
+      "We keep costs minimal to ensure accessibility. The fee covers basic resources and helps maintain club facilities. Value for money is guaranteed! 💎"
     ],
     default: [
       "That's an interesting question! For specific details, I'd recommend contacting our team directly or visiting our contact section.",
