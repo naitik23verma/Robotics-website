@@ -51,7 +51,7 @@ export default function ChatBot() {
         gsap.fromTo(
           chatContainerRef.current,
           { scale: 0, opacity: 0, transformOrigin: "bottom right" },
-          { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.7)" }
+          { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.7)" },
         );
       }
     }
@@ -59,98 +59,128 @@ export default function ChatBot() {
 
   const predefinedResponses = {
     greetings: [
-      "hello", "hi", "hey", "good morning", "good evening", "namaste"
+      "hello",
+      "hi",
+      "hey",
+      "good morning",
+      "good evening",
+      "namaste",
     ],
     about: [
-      "about", "what is", "tell me about", "robotics club", "manit", "club"
+      "about",
+      "what is",
+      "tell me about",
+      "robotics club",
+      "manit",
+      "club",
     ],
     events: [
-      "events", "competition", "robomax", "automax", "workshop", "activities"
+      "events",
+      "competition",
+      "robomax",
+      "automax",
+      "workshop",
+      "activities",
     ],
     joining: [
-      "join", "how to join", "membership", "register", "become member", "selection process", "rounds", "qualify", "interview", "hr"
+      "join",
+      "how to join",
+      "membership",
+      "register",
+      "become member",
+      "selection process",
+      "rounds",
+      "qualify",
+      "interview",
+      "hr",
     ],
-    projects: [
-      "projects", "robots", "what do you build", "work", "research"
-    ],
-    contact: [
-      "contact", "reach", "phone", "email", "address", "location"
-    ],
-    team: [
-      "team", "members", "faculty", "coordinators", "who runs"
-    ],
+    projects: ["projects", "robots", "what do you build", "work", "research"],
+    contact: ["contact", "reach", "phone", "email", "address", "location"],
+    team: ["team", "members", "faculty", "coordinators", "who runs"],
     prizes: [
-      "prizes", "awards", "rewards", "prize collection", "what can i win", "competitions prizes"
+      "prizes",
+      "awards",
+      "rewards",
+      "prize collection",
+      "what can i win",
+      "competitions prizes",
     ],
     skills: [
-      "skills", "requirements", "what skills", "programming", "technical", "prerequisites"
+      "skills",
+      "requirements",
+      "what skills",
+      "programming",
+      "technical",
+      "prerequisites",
     ],
-    fees: [
-      "fees", "cost", "money", "payment", "charges", "registration fee"
-    ]
+    fees: ["fees", "cost", "money", "payment", "charges", "registration fee"],
   };
 
   const responses = {
     greetings: [
       "Hello! Welcome to MANIT Robotics Club! How can I help you today?",
       "Hi there! I'm here to answer all your questions about our robotics club!",
-      "Hey! Great to see you interested in robotics. What would you like to know?"
+      "Hey! Great to see you interested in robotics. What would you like to know?",
     ],
     about: [
       "🤖 MANIT Robotics Club is the premier technology club at Maulana Azad National Institute of Technology, Bhopal. We focus on robotics, AI, automation, and cutting-edge technology projects. Our club provides hands-on experience with real-world applications!",
-      "We're a community of passionate engineers and tech enthusiasts who build amazing robots, participate in national competitions, and conduct workshops to spread robotics knowledge across the campus!"
+      "We're a community of passionate engineers and tech enthusiasts who build amazing robots, participate in national competitions, and conduct workshops to spread robotics knowledge across the campus!",
     ],
     events: [
       "🎯 We organize amazing events like:\n\n• RoboMAX - Our flagship robotics competition\n• AutoMAX - Autonomous vehicle challenge\n• Technical workshops\n• Guest lectures by industry experts\n• Project exhibitions\n\nCheck our events section for upcoming activities!",
-      "Our events are designed to challenge your technical skills and creativity. From beginner-friendly workshops to advanced competitions, we have something for everyone!"
+      "Our events are designed to challenge your technical skills and creativity. From beginner-friendly workshops to advanced competitions, we have something for everyone!",
     ],
     joining: [
       "🚀 **How to become part of MANIT Robotics Club:**\n\n**3-Round Selection Process:**\n\n**Round 1: Task Assignment** 📝\n• Technical task related to programming/robotics\n• Problem-solving assignment\n• Usually completed within 48-72 hours\n\n**Round 2: Technical Interview** 💻\n• Discussion of your submitted task\n• Technical questions on programming, electronics\n• Project ideas and innovation thinking\n\n**Round 3: HR Interview** 👥\n• Communication skills assessment\n• Team collaboration abilities\n• Commitment and availability discussion\n\n**Important Requirements:**\n• Open to all MANIT students (any branch)\n• No prior robotics experience required\n• Passion for technology and learning\n• Time commitment for projects and events\n\n**When to Apply:**\n• Recruitment drives: Start of each semester\n• Special drives before major events\n• Mid-semester openings (occasionally)\n\nReady to start your robotics journey? 🤖",
-      "**Joining Process Details:**\n\nOur selection ensures we get passionate, dedicated members who can contribute effectively to the club.\n\n**What we look for:**\n• Problem-solving mindset\n• Willingness to learn new technologies\n• Team collaboration skills\n• Commitment to club activities\n• Innovation and creativity\n\n**After Selection:**\n• Orientation session with senior members\n• Assignment to project teams\n• Mentorship from experienced members\n• Access to club resources and lab\n• Participation in workshops and competitions\n\nThe journey is challenging but incredibly rewarding! 🌟"
+      "**Joining Process Details:**\n\nOur selection ensures we get passionate, dedicated members who can contribute effectively to the club.\n\n**What we look for:**\n• Problem-solving mindset\n• Willingness to learn new technologies\n• Team collaboration skills\n• Commitment to club activities\n• Innovation and creativity\n\n**After Selection:**\n• Orientation session with senior members\n• Assignment to project teams\n• Mentorship from experienced members\n• Access to club resources and lab\n• Participation in workshops and competitions\n\nThe journey is challenging but incredibly rewarding! 🌟",
     ],
     projects: [
       "🔧 Our projects include:\n\n• Autonomous robots\n• Line following bots\n• Gesture-controlled vehicles\n• IoT-based automation\n• AI and ML applications\n• Drone technology\n• Industrial automation systems",
-      "We work on both academic and industry-relevant projects. Members get hands-on experience with microcontrollers, sensors, programming, and mechanical design!"
+      "We work on both academic and industry-relevant projects. Members get hands-on experience with microcontrollers, sensors, programming, and mechanical design!",
     ],
     contact: [
       "📞 Contact MANIT Robotics Club:\n\n📧 Email: robotics@manit.ac.in\n📱 Phone: +91-XXXXXXXXXX\n📍 Location: MANIT Bhopal, MP\n\nYou can also reach us through the contact form on our website!",
-      "Feel free to visit our lab or contact our coordinators. We're always happy to welcome new members and answer your questions!"
+      "Feel free to visit our lab or contact our coordinators. We're always happy to welcome new members and answer your questions!",
     ],
     team: [
       "👥 Our team consists of:\n\n• Faculty Coordinators\n• Student Coordinators\n• Core Team Members\n• Active Club Members\n\nCheck our Team section to meet our amazing coordinators and members who make everything possible!",
-      "We have an experienced team of faculty advisors and passionate student leaders who guide club activities and mentor new members."
+      "We have an experienced team of faculty advisors and passionate student leaders who guide club activities and mentor new members.",
     ],
     prizes: [
       "🏆 **Club Prizes & Rewards:**\n\n**Competition Prizes:**\n• RoboMAX winners: Cash prizes + certificates\n• AutoMAX champions: Trophies + internship opportunities\n• Project competitions: Gadgets + recognition\n\n**Member Benefits:**\n• Certificate of participation\n• Skill development certificates\n• Internship recommendations\n• Industry connections\n• Resume enhancement\n\n**Achievement Rewards:**\n• Best project awards\n• Innovation recognition\n• Leadership certificates\n• Technical excellence awards\n\nVisit our Prizes page for complete details! 🎁",
-      "We believe in recognizing talent and hard work! Our prize system motivates members to excel and provides tangible rewards for achievements. Check the Prizes section for current offerings!"
+      "We believe in recognizing talent and hard work! Our prize system motivates members to excel and provides tangible rewards for achievements. Check the Prizes section for current offerings!",
     ],
     skills: [
       "💻 **Skills You'll Develop:**\n\n**Technical Skills:**\n• Programming (C++, Python, Arduino)\n• Electronics and circuit design\n• 3D modeling and printing\n• Sensor integration\n• Microcontroller programming\n• AI/ML basics\n\n**Soft Skills:**\n• Project management\n• Team leadership\n• Problem-solving\n• Technical presentation\n• Innovation thinking\n\n**No Prerequisites Required!**\nWe teach everything from scratch. Just bring enthusiasm and willingness to learn! 🚀",
-      "Don't worry about not having prior experience! Our senior members and faculty provide comprehensive training. We start with basics and gradually move to advanced concepts."
+      "Don't worry about not having prior experience! Our senior members and faculty provide comprehensive training. We start with basics and gradually move to advanced concepts.",
     ],
     fees: [
       "💰 **Club Membership Details:**\n\n**Registration Fee:** ₹500 (One-time)\n• Includes club T-shirt\n• Access to all workshops\n• Lab facility usage\n• Certificate of membership\n\n**Additional Costs:**\n• Project components (shared among team)\n• Competition participation (varies)\n• Optional advanced workshops\n\n**Financial Support:**\n• Scholarships available for deserving students\n• Installment options for fees\n• Merit-based fee waivers\n\nInvestment in your future! The skills you gain are worth much more. 📈",
-      "We keep costs minimal to ensure accessibility. The fee covers basic resources and helps maintain club facilities. Value for money is guaranteed! 💎"
+      "We keep costs minimal to ensure accessibility. The fee covers basic resources and helps maintain club facilities. Value for money is guaranteed! 💎",
     ],
     default: [
       "That's an interesting question! For specific details, I'd recommend contacting our team directly or visiting our contact section.",
       "I'd love to help with that! You can find more information on our website or reach out to our coordinators for detailed answers.",
       "Great question! For the most accurate and up-to-date information, please contact our club coordinators through the contact form.",
-      "Thanks for asking! While I cover the basics, our team members can provide more detailed information. Feel free to reach out!"
-    ]
+      "Thanks for asking! While I cover the basics, our team members can provide more detailed information. Feel free to reach out!",
+    ],
   };
 
   const getBotResponse = (userMessage: string): string => {
     const message = userMessage.toLowerCase();
-    
+
     for (const [category, keywords] of Object.entries(predefinedResponses)) {
-      if (keywords.some(keyword => message.includes(keyword))) {
+      if (keywords.some((keyword) => message.includes(keyword))) {
         const categoryResponses = responses[category as keyof typeof responses];
-        return categoryResponses[Math.floor(Math.random() * categoryResponses.length)];
+        return categoryResponses[
+          Math.floor(Math.random() * categoryResponses.length)
+        ];
       }
     }
-    
-    return responses.default[Math.floor(Math.random() * responses.default.length)];
+
+    return responses.default[
+      Math.floor(Math.random() * responses.default.length)
+    ];
   };
 
   const handleSendMessage = async () => {
@@ -163,22 +193,25 @@ export default function ChatBot() {
       timestamp: new Date(),
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages((prev) => [...prev, userMessage]);
     setInputValue("");
     setIsTyping(true);
 
     // Simulate bot thinking time
-    setTimeout(() => {
-      const botResponse: Message = {
-        id: (Date.now() + 1).toString(),
-        text: getBotResponse(inputValue),
-        isBot: true,
-        timestamp: new Date(),
-      };
+    setTimeout(
+      () => {
+        const botResponse: Message = {
+          id: (Date.now() + 1).toString(),
+          text: getBotResponse(inputValue),
+          isBot: true,
+          timestamp: new Date(),
+        };
 
-      setMessages(prev => [...prev, botResponse]);
-      setIsTyping(false);
-    }, 1000 + Math.random() * 1000);
+        setMessages((prev) => [...prev, botResponse]);
+        setIsTyping(false);
+      },
+      1000 + Math.random() * 1000,
+    );
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -205,8 +238,12 @@ export default function ChatBot() {
                 🤖
               </div>
               <div>
-                <h3 className="text-[#0F1A35] font-bold text-sm">Club Assistant</h3>
-                <p className="text-[#0F1A35]/70 text-xs">Always here to help!</p>
+                <h3 className="text-[#0F1A35] font-bold text-sm">
+                  Club Assistant
+                </h3>
+                <p className="text-[#0F1A35]/70 text-xs">
+                  Always here to help!
+                </p>
               </div>
             </div>
             <button
@@ -214,7 +251,11 @@ export default function ChatBot() {
               className="text-[#0F1A35] hover:bg-white/20 rounded-full p-1 transition-colors"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
               </svg>
             </button>
           </div>
@@ -234,13 +275,18 @@ export default function ChatBot() {
                   }`}
                 >
                   <p className="whitespace-pre-line">{message.text}</p>
-                  <p className={`text-xs mt-1 ${message.isBot ? "text-gray-400" : "text-[#0F1A35]/70"}`}>
-                    {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                  <p
+                    className={`text-xs mt-1 ${message.isBot ? "text-gray-400" : "text-[#0F1A35]/70"}`}
+                  >
+                    {message.timestamp.toLocaleTimeString([], {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
                   </p>
                 </div>
               </div>
             ))}
-            
+
             {isTyping && (
               <div className="flex justify-start">
                 <div className="bg-white/10 text-white border border-white/20 p-3 rounded-lg">
@@ -271,7 +317,11 @@ export default function ChatBot() {
                 disabled={!inputValue.trim()}
                 className="bg-[#9CF185] text-[#0F1A35] px-3 py-2 rounded-lg hover:bg-[#9CF185]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
                   <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                 </svg>
               </button>
@@ -288,7 +338,11 @@ export default function ChatBot() {
         {!isOpen ? (
           <>
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
+              <path
+                fillRule="evenodd"
+                d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+                clipRule="evenodd"
+              />
             </svg>
             {/* Notification dot */}
             <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full flex items-center justify-center">
@@ -297,7 +351,11 @@ export default function ChatBot() {
           </>
         ) : (
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+            <path
+              fillRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
           </svg>
         )}
       </button>

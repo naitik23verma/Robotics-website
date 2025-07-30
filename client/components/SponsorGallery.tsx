@@ -71,7 +71,8 @@ export default function SponsorGallery() {
         </h2>
         <div className="w-32 h-1 bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] mx-auto rounded-full mb-4"></div>
         <p className="text-gray-300 font-poppins text-lg max-w-2xl mx-auto">
-          Proud to be supported by leading technology companies and organizations
+          Proud to be supported by leading technology companies and
+          organizations
         </p>
       </div>
 
@@ -87,8 +88,16 @@ export default function SponsorGallery() {
           className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-2xl flex items-center justify-center hover:bg-[#9CF185]/20 hover:border-[#9CF185]/40 transition-all duration-300 group"
           aria-label="Previous sponsors"
         >
-          <svg className="w-6 h-6 text-white group-hover:text-[#9CF185] transition-colors" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+          <svg
+            className="w-6 h-6 text-white group-hover:text-[#9CF185] transition-colors"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fillRule="evenodd"
+              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              clipRule="evenodd"
+            />
           </svg>
         </button>
 
@@ -97,8 +106,16 @@ export default function SponsorGallery() {
           className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-2xl flex items-center justify-center hover:bg-[#9CF185]/20 hover:border-[#9CF185]/40 transition-all duration-300 group"
           aria-label="Next sponsors"
         >
-          <svg className="w-6 h-6 text-white group-hover:text-[#9CF185] transition-colors" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+          <svg
+            className="w-6 h-6 text-white group-hover:text-[#9CF185] transition-colors"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fillRule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clipRule="evenodd"
+            />
           </svg>
         </button>
 
@@ -155,11 +172,13 @@ export default function SponsorGallery() {
             <div className="w-24 h-1 bg-white/20 rounded-full overflow-hidden">
               <div
                 className="h-full bg-gradient-to-r from-[#9CF185] to-[#60BE58] rounded-full transition-all duration-700"
-                style={{ width: `${((currentSlide + 1) / totalSlides) * 100}%` }}
+                style={{
+                  width: `${((currentSlide + 1) / totalSlides) * 100}%`,
+                }}
               />
             </div>
             <span className="text-[#9CF185] font-poppins text-xs">
-              {isHovered ? 'Paused' : 'Auto-sliding'}
+              {isHovered ? "Paused" : "Auto-sliding"}
             </span>
           </div>
         </div>

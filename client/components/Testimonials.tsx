@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SponsorGallery from "./SponsorGallery";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,10 +16,11 @@ export default function Testimonials() {
       role: "Software Engineer",
       company: "Google",
       image: "👨‍💻",
-      quote: "The Robotics Club at MANIT was the foundation of my career. The hands-on experience with cutting-edge technology and the collaborative environment taught me problem-solving skills that I use every day at Google.",
+      quote:
+        "The Robotics Club at MANIT was the foundation of my career. The hands-on experience with cutting-edge technology and the collaborative environment taught me problem-solving skills that I use every day at Google.",
       rating: 5,
       year: "Class of 2021",
-      category: "Alumni"
+      category: "Alumni",
     },
     {
       id: 2,
@@ -27,10 +28,11 @@ export default function Testimonials() {
       role: "Team Lead",
       company: "Current Student",
       image: "👩‍🔬",
-      quote: "Being part of this club has been transformational. From building my first robot to leading teams in national competitions, every moment has been a learning experience.",
+      quote:
+        "Being part of this club has been transformational. From building my first robot to leading teams in national competitions, every moment has been a learning experience.",
       rating: 5,
       year: "Final Year",
-      category: "Current Student"
+      category: "Current Student",
     },
     {
       id: 3,
@@ -38,10 +40,11 @@ export default function Testimonials() {
       role: "Robotics Engineer",
       company: "ISRO",
       image: "🚀",
-      quote: "The technical foundation I gained at MANIT's Robotics Club directly contributed to my work at ISRO. The club's emphasis on innovation prepared me for real-world challenges.",
+      quote:
+        "The technical foundation I gained at MANIT's Robotics Club directly contributed to my work at ISRO. The club's emphasis on innovation prepared me for real-world challenges.",
       rating: 5,
       year: "Class of 2019",
-      category: "Alumni"
+      category: "Alumni",
     },
     {
       id: 4,
@@ -49,10 +52,11 @@ export default function Testimonials() {
       role: "AI Research Scientist",
       company: "Microsoft",
       image: "🤖",
-      quote: "The interdisciplinary approach of the club, combining robotics with AI and machine learning, gave me a unique perspective that's invaluable in my current research.",
+      quote:
+        "The interdisciplinary approach of the club, combining robotics with AI and machine learning, gave me a unique perspective that's invaluable in my current research.",
       rating: 5,
       year: "Class of 2020",
-      category: "Alumni"
+      category: "Alumni",
     },
     {
       id: 5,
@@ -60,10 +64,11 @@ export default function Testimonials() {
       role: "Mechanical Engineer",
       company: "Tesla",
       image: "⚡",
-      quote: "Working on autonomous vehicle projects in the club directly led to my career in automotive innovation. The practical experience was unmatched.",
+      quote:
+        "Working on autonomous vehicle projects in the club directly led to my career in automotive innovation. The practical experience was unmatched.",
       rating: 5,
       year: "Class of 2022",
-      category: "Alumni"
+      category: "Alumni",
     },
     {
       id: 6,
@@ -71,10 +76,11 @@ export default function Testimonials() {
       role: "IoT Developer",
       company: "Amazon",
       image: "🌐",
-      quote: "The club taught me to think beyond textbooks. Building real IoT solutions and competing nationally boosted my confidence and technical skills tremendously.",
+      quote:
+        "The club taught me to think beyond textbooks. Building real IoT solutions and competing nationally boosted my confidence and technical skills tremendously.",
       rating: 5,
       year: "Class of 2021",
-      category: "Alumni"
+      category: "Alumni",
     },
     {
       id: 7,
@@ -82,10 +88,11 @@ export default function Testimonials() {
       role: "Project Coordinator",
       company: "Current Student",
       image: "🎯",
-      quote: "Coordinating club projects has enhanced my leadership and technical management skills. The mentorship from seniors is exceptional.",
+      quote:
+        "Coordinating club projects has enhanced my leadership and technical management skills. The mentorship from seniors is exceptional.",
       rating: 5,
       year: "Third Year",
-      category: "Current Student"
+      category: "Current Student",
     },
     {
       id: 8,
@@ -93,10 +100,11 @@ export default function Testimonials() {
       role: "Faculty Advisor",
       company: "MANIT",
       image: "👨‍🏫",
-      quote: "It's amazing to see students evolve from curious beginners to confident engineers. The club provides the perfect platform for practical learning.",
+      quote:
+        "It's amazing to see students evolve from curious beginners to confident engineers. The club provides the perfect platform for practical learning.",
       rating: 5,
       year: "Faculty",
-      category: "Faculty"
+      category: "Faculty",
     },
     {
       id: 9,
@@ -104,10 +112,11 @@ export default function Testimonials() {
       role: "Embedded Systems Engineer",
       company: "Bosch",
       image: "🔧",
-      quote: "From microcontroller programming to system design, everything I learned in the club is what I use daily in my job at Bosch.",
+      quote:
+        "From microcontroller programming to system design, everything I learned in the club is what I use daily in my job at Bosch.",
       rating: 5,
       year: "Class of 2020",
-      category: "Alumni"
+      category: "Alumni",
     },
     {
       id: 10,
@@ -115,10 +124,11 @@ export default function Testimonials() {
       role: "Startup Founder",
       company: "TechBot Solutions",
       image: "💡",
-      quote: "The entrepreneurial spirit and innovation mindset I developed in the club helped me start my own robotics company after graduation.",
+      quote:
+        "The entrepreneurial spirit and innovation mindset I developed in the club helped me start my own robotics company after graduation.",
       rating: 5,
       year: "Class of 2019",
-      category: "Alumni"
+      category: "Alumni",
     },
     {
       id: 11,
@@ -126,10 +136,11 @@ export default function Testimonials() {
       role: "Research Assistant",
       company: "Current Student",
       image: "🔬",
-      quote: "Working on cutting-edge research projects with club members has opened doors to national conferences and publications.",
+      quote:
+        "Working on cutting-edge research projects with club members has opened doors to national conferences and publications.",
       rating: 5,
       year: "Second Year",
-      category: "Current Student"
+      category: "Current Student",
     },
     {
       id: 12,
@@ -137,18 +148,20 @@ export default function Testimonials() {
       role: "Controls Engineer",
       company: "SpaceX",
       image: "🛰️",
-      quote: "The control systems and automation projects in the club gave me the foundation to work on rocket guidance systems at SpaceX.",
+      quote:
+        "The control systems and automation projects in the club gave me the foundation to work on rocket guidance systems at SpaceX.",
       rating: 5,
       year: "Class of 2021",
-      category: "Alumni"
-    }
+      category: "Alumni",
+    },
   ];
 
   // GSAP animations
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animate cards on scroll
-      gsap.fromTo(cardsRef.current?.children || [],
+      gsap.fromTo(
+        cardsRef.current?.children || [],
         { y: 60, opacity: 0, scale: 0.9 },
         {
           y: 0,
@@ -160,9 +173,9 @@ export default function Testimonials() {
           scrollTrigger: {
             trigger: cardsRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
     }, sectionRef);
 
@@ -171,7 +184,10 @@ export default function Testimonials() {
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
-      <span key={i} className={`text-sm ${i < rating ? 'text-yellow-400' : 'text-gray-500'}`}>
+      <span
+        key={i}
+        className={`text-sm ${i < rating ? "text-yellow-400" : "text-gray-500"}`}
+      >
         ⭐
       </span>
     ));
@@ -179,19 +195,22 @@ export default function Testimonials() {
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Alumni':
-        return 'from-[#9CF185] to-[#60BE58]';
-      case 'Current Student':
-        return 'from-[#578FD9] to-[#AC0FB8]';
-      case 'Faculty':
-        return 'from-[#AC0FB8] to-[#578FD9]';
+      case "Alumni":
+        return "from-[#9CF185] to-[#60BE58]";
+      case "Current Student":
+        return "from-[#578FD9] to-[#AC0FB8]";
+      case "Faculty":
+        return "from-[#AC0FB8] to-[#578FD9]";
       default:
-        return 'from-[#9CF185] to-[#60BE58]';
+        return "from-[#9CF185] to-[#60BE58]";
     }
   };
 
   return (
-    <section ref={sectionRef} className="bg-[#0F1A35] py-20 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="bg-[#0F1A35] py-20 relative overflow-hidden"
+    >
       {/* Enhanced background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-80 h-80 bg-[#9CF185]/10 rounded-full filter blur-3xl animate-pulse"></div>
@@ -216,7 +235,8 @@ export default function Testimonials() {
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] mx-auto rounded-full mb-4"></div>
           <p className="text-gray-300 font-poppins text-lg max-w-2xl mx-auto">
-            Hear from our amazing community of students, alumni, faculty, and professionals who've been part of our robotics journey
+            Hear from our amazing community of students, alumni, faculty, and
+            professionals who've been part of our robotics journey
           </p>
         </div>
 
@@ -241,7 +261,10 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonial Cards Grid */}
-        <div ref={cardsRef} className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20">
+        <div
+          ref={cardsRef}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20"
+        >
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
@@ -249,16 +272,20 @@ export default function Testimonials() {
             >
               {/* Background pattern */}
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#9CF185]/5 to-transparent rounded-full filter blur-xl"></div>
-              
+
               {/* Category badge */}
-              <div className={`absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(testimonial.category)} text-white`}>
+              <div
+                className={`absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(testimonial.category)} text-white`}
+              >
                 {testimonial.category}
               </div>
 
               <div className="relative z-10">
                 {/* Avatar and basic info */}
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className={`w-14 h-14 bg-gradient-to-br ${getCategoryColor(testimonial.category)} rounded-full flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-14 h-14 bg-gradient-to-br ${getCategoryColor(testimonial.category)} rounded-full flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300`}
+                  >
                     {testimonial.image}
                   </div>
                   <div className="flex-1">
@@ -273,7 +300,7 @@ export default function Testimonials() {
                     </p>
                   </div>
                 </div>
-                
+
                 {/* Quote */}
                 <div className="mb-4">
                   <div className="text-2xl text-[#9CF185]/30 mb-2">"</div>
@@ -281,7 +308,7 @@ export default function Testimonials() {
                     {testimonial.quote}
                   </p>
                 </div>
-                
+
                 {/* Rating and year */}
                 <div className="flex items-center justify-between">
                   <div className="flex space-x-1">
@@ -306,7 +333,8 @@ export default function Testimonials() {
               Ready to Join Our Community?
             </h3>
             <p className="text-gray-300 mb-6 font-poppins">
-              Become part of MANIT's most innovative club and start your journey in robotics and technology.
+              Become part of MANIT's most innovative club and start your journey
+              in robotics and technology.
             </p>
             <button
               onClick={() =>
