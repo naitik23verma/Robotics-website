@@ -1,22 +1,24 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -29,7 +31,7 @@ export default function Contact() {
         <h2 className="text-[#9CF185] font-poppins text-3xl font-bold text-center mb-16">
           Contact Us
         </h2>
-        
+
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact form */}
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -46,7 +48,7 @@ export default function Contact() {
                 required
               />
             </div>
-            
+
             <div>
               <label className="block text-[#BABFC6] font-poppins text-base font-medium mb-2">
                 Email
@@ -60,7 +62,7 @@ export default function Contact() {
                 required
               />
             </div>
-            
+
             <div>
               <label className="block text-[#A3A8B0] font-poppins text-base font-medium mb-2">
                 Message
@@ -74,7 +76,7 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
-            
+
             <button
               type="submit"
               className="bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white font-poppins font-medium px-8 py-3 rounded-lg hover:opacity-90 transition-opacity"
@@ -82,7 +84,7 @@ export default function Contact() {
               Submit
             </button>
           </form>
-          
+
           {/* Map placeholder */}
           <div className="bg-gray-300 h-80 rounded-lg shadow-lg flex items-center justify-center">
             <span className="text-gray-600 font-poppins text-base">

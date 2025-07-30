@@ -3,9 +3,9 @@ export default function Testimonials() {
     <section className="bg-[#0F1A35] py-16 relative overflow-hidden">
       {/* Background blur effects */}
       <div className="absolute right-0 top-80 w-52 h-[426px] bg-[#376B3F] blur-[100px] rounded-full"></div>
-      
+
       {/* Decorative robot image */}
-      <img 
+      <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/80a18452a4ecf699b1d02202b37519eb50ebe39f"
         alt=""
         className="absolute -left-20 -top-7 w-[277px] h-[156px] opacity-49"
@@ -18,24 +18,24 @@ export default function Testimonials() {
           </h2>
           <div className="w-24 h-1 bg-gray-300 mx-auto"></div>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {[1, 2, 3].map((i) => (
-            <div 
+            <div
               key={i}
               className="bg-white/10 backdrop-blur-md rounded-lg border-2 border-dashed border-gray-300 p-6 relative"
             >
               {/* Speech bubble tail */}
               <div className="absolute -bottom-1 left-8 w-2 h-1 border-t-4 border-r-4 border-l-4 border-gray-300"></div>
-              
+
               <div className="w-6 h-6 bg-gray-300 rounded-full mb-4"></div>
-              
+
               <div className="space-y-3 mb-6">
                 <div className="w-full h-3 bg-gray-300 rounded"></div>
                 <div className="w-3/4 h-3 bg-gray-300 rounded"></div>
                 <div className="w-5/6 h-3 bg-gray-300 rounded"></div>
               </div>
-              
+
               <div className="w-56 h-4 bg-gray-400 rounded mb-2"></div>
               <div className="w-40 h-3 bg-gray-300 rounded"></div>
             </div>
@@ -49,17 +49,17 @@ export default function Testimonials() {
           </h2>
           <div className="w-24 h-1 bg-gray-300 mx-auto"></div>
         </div>
-        
+
         <div className="flex justify-between items-center">
           {/* Previous button */}
           <button className="w-8 h-8 bg-white rounded-full border border-gray-300 shadow-lg flex items-center justify-center">
             <div className="w-2 h-2 border-t-4 border-r-8 border-b-4 border-transparent border-r-black"></div>
           </button>
-          
+
           {/* Sponsor logos */}
           <div className="flex space-x-6">
             {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div 
+              <div
                 key={i}
                 className="w-36 h-16 bg-gray-300 border border-gray-300 rounded flex items-center justify-center"
               >
@@ -67,13 +67,13 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-          
+
           {/* Next button */}
           <button className="w-8 h-8 bg-white rounded-full border border-gray-300 shadow-lg flex items-center justify-center">
             <div className="w-2 h-2 border-t-4 border-l-8 border-b-4 border-transparent border-l-black"></div>
           </button>
         </div>
-        
+
         {/* Pagination dots */}
         <div className="flex justify-center space-x-2 mt-12">
           <div className="w-3 h-3 bg-gray-400 rounded-full border-2 border-gray-600"></div>

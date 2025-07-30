@@ -9,8 +9,11 @@ export default function RoboMAX() {
         <div className="text-center text-white p-8">
           <h1 className="text-4xl font-bold mb-4 font-poppins">RoboMAX</h1>
           <p className="text-xl font-poppins">
-            This page is under construction. Please continue browsing other sections or{" "}
-            <span className="text-robotics-green">let us know what you'd like to see here!</span>
+            This page is under construction. Please continue browsing other
+            sections or{" "}
+            <span className="text-robotics-green">
+              let us know what you'd like to see here!
+            </span>
           </p>
         </div>
       </div>

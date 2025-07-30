@@ -15,26 +15,26 @@ export default function Navigation() {
 
           {/* Navigation links */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="text-white font-poppins text-base font-medium hover:text-robotics-green transition-colors"
             >
               Home
             </Link>
-            <Link 
-              to="/robomax" 
+            <Link
+              to="/robomax"
               className="text-white font-poppins text-base font-medium hover:text-robotics-green transition-colors"
             >
               RoboMAX
             </Link>
-            <Link 
-              to="/team" 
+            <Link
+              to="/team"
               className="text-white font-poppins text-base font-medium hover:text-robotics-green transition-colors"
             >
               Our Team
             </Link>
-            <Link 
-              to="/events" 
+            <Link
+              to="/events"
               className="text-white font-poppins text-base font-medium hover:text-robotics-green transition-colors"
             >
               Past Events
@@ -44,8 +44,18 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button className="text-white p-2">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
