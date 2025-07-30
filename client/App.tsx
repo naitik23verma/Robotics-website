@@ -26,6 +26,7 @@ const App = () => (
           <Route path="/robomax" element={<RoboMAX />} />
           <Route path="/team" element={<Team />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/prizes" element={<Prizes />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
