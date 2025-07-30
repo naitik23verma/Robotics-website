@@ -49,14 +49,16 @@ export default function SponsorGallery() {
     setCurrentSlide(index);
   };
 
-  // Auto-slide functionality
+  // Enhanced auto-slide functionality with pause on hover
   useEffect(() => {
+    if (isHovered) return; // Don't auto-slide when hovered
+
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000); // Change slide every 5 seconds
+    }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
   return (
     <div className="w-full">
