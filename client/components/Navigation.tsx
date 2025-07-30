@@ -100,7 +100,7 @@ export default function Navigation() {
             >
               Projects
             </button>
-            <button 
+            <button
               onClick={() => scrollToSection('contact')}
               className={`text-base font-medium font-poppins transition-all duration-200 hover:text-[#9CF185] ${
                 activeSection === 'contact' ? 'text-[#9CF185] border-b-2 border-[#9CF185]' : 'text-white'
@@ -108,14 +108,6 @@ export default function Navigation() {
             >
               Contact
             </button>
-            
-            {/* Prize Collection Button */}
-            <Link 
-              to="/prizes" 
-              className="bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white font-poppins font-medium px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm"
-            >
-              🏆 Prizes
-            </Link>
           </div>
 
           {/* Mobile menu button */}
