@@ -132,6 +132,12 @@ export default function Navigation() {
             >
               Contact
             </button>
+            <Link
+              to="/prizes"
+              className="text-base font-medium font-poppins transition-all duration-200 hover:scale-105 bg-gradient-to-r from-[#9CF185] to-[#60BE58] text-[#0F1B35] px-4 py-2 rounded-full hover:shadow-lg hover:shadow-[#9CF185]/25"
+            >
+              🏆 Prizes
+            </Link>
           </div>
 
           {/* Mobile menu button */}
