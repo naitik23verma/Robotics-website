@@ -199,34 +199,36 @@ export default function Contact() {
               </span>
             </div>
 
-            {/* Payment QR Section */}
-            <div className="bg-white/10 backdrop-blur-md rounded-lg border border-gray-200/20 p-6">
-              <h3 className="text-white font-poppins text-xl font-bold mb-4">
-                Support Our Club
-              </h3>
+            {/* Payment QR Section - Only for non-MANIT users */}
+            {!formData.isMANITStudent && (
+              <div className="bg-white/10 backdrop-blur-md rounded-lg border border-gray-200/20 p-6">
+                <h3 className="text-white font-poppins text-xl font-bold mb-4">
+                  Support Our Club
+                </h3>
 
-              <div className="text-center">
-                <div className="bg-white p-4 rounded-lg inline-block mb-4">
-                  {/* QR Code placeholder */}
-                  <div className="w-48 h-48 bg-gray-200 flex items-center justify-center rounded-lg">
-                    <div className="text-center">
-                      <div className="w-32 h-32 bg-black/10 rounded mb-2 mx-auto"></div>
-                      <p className="text-gray-600 text-sm font-poppins">QR Code</p>
+                <div className="text-center">
+                  <div className="bg-white p-4 rounded-lg inline-block mb-4">
+                    {/* QR Code placeholder */}
+                    <div className="w-48 h-48 bg-gray-200 flex items-center justify-center rounded-lg">
+                      <div className="text-center">
+                        <div className="w-32 h-32 bg-black/10 rounded mb-2 mx-auto"></div>
+                        <p className="text-gray-600 text-sm font-poppins">QR Code</p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <p className="text-white font-poppins text-sm mb-2">
-                  Scan to donate for club activities
-                </p>
-                <p className="text-[#9CF185] font-poppins text-xs">
-                  For non-MANIT members only
-                </p>
-                <p className="text-white font-poppins text-xs mt-2">
-                  UPI ID: roboticsclub@manit
-                </p>
+                  <p className="text-white font-poppins text-sm mb-2">
+                    Scan to donate for club activities
+                  </p>
+                  <p className="text-[#9CF185] font-poppins text-xs">
+                    For non-MANIT members only
+                  </p>
+                  <p className="text-white font-poppins text-xs mt-2">
+                    UPI ID: roboticsclub@manit
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Contact Info */}
             <div className="bg-white/10 backdrop-blur-md rounded-lg border border-gray-200/20 p-6">
