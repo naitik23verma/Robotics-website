@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import RoboMAX from "./pages/RoboMAX";
 import Team from "./pages/Team";
 import Events from "./pages/Events";
+import Prizes from "./pages/Prizes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
