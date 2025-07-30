@@ -45,7 +45,7 @@ export default function Hero() {
         rotation: 360,
         duration: 20,
         repeat: -1,
-        ease: "none"
+        ease: "none",
       });
     }, heroRef);
 
@@ -54,9 +54,9 @@ export default function Hero() {
 
   // Scroll to events section
   const scrollToEvents = () => {
-    const element = document.getElementById('events');
+    const element = document.getElementById("events");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 

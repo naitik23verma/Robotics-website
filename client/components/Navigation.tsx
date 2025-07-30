@@ -9,9 +9,9 @@ export default function Navigation() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -23,7 +23,14 @@ export default function Navigation() {
       setIsScrolled(scrollPosition > 100);
 
       // Determine active section
-      const sections = ['home', 'about', 'events', 'achievements', 'projects', 'contact'];
+      const sections = [
+        "home",
+        "about",
+        "events",
+        "achievements",
+        "projects",
+        "contact",
+      ];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -36,20 +43,25 @@ export default function Navigation() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-[#121C37]/95 backdrop-blur-md shadow-lg border-b border-[#9CF185]/20' 
-        : 'bg-[#121C37] border-b border-gray-300/20'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#121C37]/95 backdrop-blur-md shadow-lg border-b border-[#9CF185]/20"
+          : "bg-[#121C37] border-b border-gray-300/20"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 lg:px-16">
         <div className="flex items-center justify-between h-[73px]">
           {/* Logo and brand name */}
-          <div className="flex items-center space-x-4 cursor-pointer" onClick={() => scrollToSection('home')}>
+          <div
+            className="flex items-center space-x-4 cursor-pointer"
+            onClick={() => scrollToSection("home")}
+          >
             <div className="w-12 h-12 bg-gradient-to-br from-[#9CF185] to-[#60BE58] rounded-lg flex items-center justify-center transform hover:scale-110 transition-transform duration-200">
               <span className="text-[#0F1B35] font-bold text-lg">RC</span>
             </div>
@@ -60,50 +72,62 @@ export default function Navigation() {
 
           {/* Navigation links */}
           <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
+            <button
+              onClick={() => scrollToSection("home")}
               className={`text-base font-medium font-poppins transition-all duration-200 hover:text-[#9CF185] ${
-                activeSection === 'home' ? 'text-[#9CF185] border-b-2 border-[#9CF185]' : 'text-white'
+                activeSection === "home"
+                  ? "text-[#9CF185] border-b-2 border-[#9CF185]"
+                  : "text-white"
               }`}
             >
               Home
             </button>
-            <button 
-              onClick={() => scrollToSection('about')}
+            <button
+              onClick={() => scrollToSection("about")}
               className={`text-base font-medium font-poppins transition-all duration-200 hover:text-[#9CF185] ${
-                activeSection === 'about' ? 'text-[#9CF185] border-b-2 border-[#9CF185]' : 'text-white'
+                activeSection === "about"
+                  ? "text-[#9CF185] border-b-2 border-[#9CF185]"
+                  : "text-white"
               }`}
             >
               About
             </button>
-            <button 
-              onClick={() => scrollToSection('events')}
+            <button
+              onClick={() => scrollToSection("events")}
               className={`text-base font-medium font-poppins transition-all duration-200 hover:text-[#9CF185] ${
-                activeSection === 'events' ? 'text-[#9CF185] border-b-2 border-[#9CF185]' : 'text-white'
+                activeSection === "events"
+                  ? "text-[#9CF185] border-b-2 border-[#9CF185]"
+                  : "text-white"
               }`}
             >
               Events
             </button>
-            <button 
-              onClick={() => scrollToSection('achievements')}
+            <button
+              onClick={() => scrollToSection("achievements")}
               className={`text-base font-medium font-poppins transition-all duration-200 hover:text-[#9CF185] ${
-                activeSection === 'achievements' ? 'text-[#9CF185] border-b-2 border-[#9CF185]' : 'text-white'
+                activeSection === "achievements"
+                  ? "text-[#9CF185] border-b-2 border-[#9CF185]"
+                  : "text-white"
               }`}
             >
               Achievements
             </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
+            <button
+              onClick={() => scrollToSection("projects")}
               className={`text-base font-medium font-poppins transition-all duration-200 hover:text-[#9CF185] ${
-                activeSection === 'projects' ? 'text-[#9CF185] border-b-2 border-[#9CF185]' : 'text-white'
+                activeSection === "projects"
+                  ? "text-[#9CF185] border-b-2 border-[#9CF185]"
+                  : "text-white"
               }`}
             >
               Projects
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
               className={`text-base font-medium font-poppins transition-all duration-200 hover:text-[#9CF185] ${
-                activeSection === 'contact' ? 'text-[#9CF185] border-b-2 border-[#9CF185]' : 'text-white'
+                activeSection === "contact"
+                  ? "text-[#9CF185] border-b-2 border-[#9CF185]"
+                  : "text-white"
               }`}
             >
               Contact
@@ -113,8 +137,18 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button className="text-white p-2 hover:text-[#9CF185] transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>

@@ -34,7 +34,8 @@ export default function Contact() {
     const { name, value, type } = e.target;
     setFormData({
       ...formData,
-      [name]: type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
+      [name]:
+        type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
     });
   };
 
@@ -121,7 +122,8 @@ export default function Contact() {
             {isLoggedIn && (
               <div className="bg-green-500/20 backdrop-blur-md rounded-lg border border-green-400/30 p-6">
                 <h3 className="text-green-400 font-poppins text-lg font-bold mb-2">
-                  Welcome {formData.isMANITStudent ? "MANIT Student" : "Member"}!
+                  Welcome {formData.isMANITStudent ? "MANIT Student" : "Member"}
+                  !
                 </h3>
                 <p className="text-white font-poppins text-sm">
                   {formData.isMANITStudent
@@ -206,7 +208,9 @@ export default function Contact() {
                     <div className="w-48 h-48 bg-gray-200 flex items-center justify-center rounded-lg">
                       <div className="text-center">
                         <div className="w-32 h-32 bg-black/10 rounded mb-2 mx-auto"></div>
-                        <p className="text-gray-600 text-sm font-poppins">QR Code</p>
+                        <p className="text-gray-600 text-sm font-poppins">
+                          QR Code
+                        </p>
                       </div>
                     </div>
                   </div>
