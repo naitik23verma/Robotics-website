@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { createServer } from "./server";
-=======
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
-import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
->>>>>>> 0d905cba242ef562ee8e56d87a97bb59c6df89d1
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-<<<<<<< HEAD
     fs: {
       allow: ["./client", "./shared"],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
@@ -45,13 +37,3 @@ function expressPlugin(): Plugin {
     },
   };
 }
-=======
-  },
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-}));
->>>>>>> 0d905cba242ef562ee8e56d87a97bb59c6df89d1
