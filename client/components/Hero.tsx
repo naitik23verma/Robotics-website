@@ -116,20 +116,57 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
         <h1
           ref={titleRef}
-          className="text-white font-taviraj text-4xl md:text-5xl font-bold leading-tight mb-6"
+          className="text-white font-taviraj text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 bg-gradient-to-r from-white via-[#9CF185] to-white bg-clip-text text-transparent"
         >
           Welcome to Robotics Club – MANIT Bhopal
         </h1>
 
         <p
           ref={subtitleRef}
-          className="text-white font-montserrat text-xl md:text-2xl font-semibold"
+          className="text-gray-200 font-montserrat text-xl md:text-3xl font-semibold mb-12 max-w-3xl mx-auto"
         >
           Where Innovation Meets Engineering
         </p>
+
+        {/* CTA Buttons */}
+        <div ref={ctaRef} className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <button
+            onClick={scrollToEvents}
+            className="group bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white font-poppins font-semibold px-8 py-4 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg"
+          >
+            <span className="mr-2">🚀</span>
+            Explore Events
+            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
+          </button>
+
+          <button
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            className="group border-2 border-[#9CF185] text-[#9CF185] font-poppins font-semibold px-8 py-4 rounded-full hover:bg-[#9CF185] hover:text-[#0F1B35] transition-all duration-300 text-lg"
+          >
+            <span className="mr-2">📖</span>
+            Learn More
+            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
+          </button>
+        </div>
+
+        {/* Floating Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:scale-105 transition-transform duration-300">
+            <div className="text-3xl font-bold text-[#9CF185] mb-2">500+</div>
+            <div className="text-white font-poppins">Active Members</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:scale-105 transition-transform duration-300">
+            <div className="text-3xl font-bold text-[#9CF185] mb-2">25+</div>
+            <div className="text-white font-poppins">Events Organized</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:scale-105 transition-transform duration-300">
+            <div className="text-3xl font-bold text-[#9CF185] mb-2">15+</div>
+            <div className="text-white font-poppins">Awards Won</div>
+          </div>
+        </div>
       </div>
     </section>
   );
