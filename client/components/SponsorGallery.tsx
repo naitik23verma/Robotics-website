@@ -102,10 +102,10 @@ export default function SponsorGallery() {
           </svg>
         </button>
 
-        {/* Sponsors Grid */}
+        {/* Enhanced Sponsors Grid */}
         <div className="overflow-hidden mx-12">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out"
+          <div
+            className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {sponsors.map((slideSponsors, slideIndex) => (
@@ -114,12 +114,12 @@ export default function SponsorGallery() {
                   {slideSponsors.map((sponsor, sponsorIndex) => (
                     <div
                       key={`${slideIndex}-${sponsorIndex}`}
-                      className="bg-gray-200 border border-gray-300 rounded-lg p-4 h-20 flex items-center justify-center hover:shadow-lg transition-shadow duration-300 group"
+                      className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 h-24 flex items-center justify-center hover:bg-white/15 hover:border-[#9CF185]/40 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer"
                     >
-                      {/* Placeholder for sponsor logo */}
-                      <div className="w-16 h-8 bg-gray-400 rounded flex items-center justify-center">
-                        <span className="text-xs text-white font-bold">
-                          {sponsor.name.substring(0, 3)}
+                      {/* Enhanced placeholder for sponsor logo */}
+                      <div className="w-full h-full bg-gradient-to-br from-[#9CF185]/20 to-[#AC0FB8]/20 rounded-lg flex items-center justify-center group-hover:from-[#9CF185]/30 group-hover:to-[#AC0FB8]/30 transition-all duration-300">
+                        <span className="text-sm text-white font-bold group-hover:text-[#9CF185] transition-colors">
+                          {sponsor.name.substring(0, 4)}
                         </span>
                       </div>
                     </div>
