@@ -5,11 +5,7 @@
   "tsx": true,
   "tailwind": {
     "config": "tailwind.config.ts",
-<<<<<<< HEAD
-    "css": "client/index.css",
-=======
-    "css": "src/index.css",
->>>>>>> 0d905cba242ef562ee8e56d87a97bb59c6df89d1
+    "css": "client/global.css",
     "baseColor": "slate",
     "cssVariables": true,
     "prefix": ""
@@ -21,8 +17,4 @@
     "lib": "@/lib",
     "hooks": "@/hooks"
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 0d905cba242ef562ee8e56d87a97bb59c6df89d1
