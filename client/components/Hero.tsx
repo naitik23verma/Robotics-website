@@ -81,7 +81,7 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/6e46b4cf75136dd5e44caaa903a48573b2a40909"
           alt=""
-          className="robot-float absolute right-0 -top-72 w-[499px] h-[696px] opacity-90"
+          className="robot-float absolute right-0 top-10 w-[499px] h-[696px] opacity-90"
           style={{ transform: "rotate(0.186deg)" }}
         />
 
@@ -89,28 +89,28 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/cf4f1aced408cc9422d231e2950986152b9dd48a"
           alt=""
-          className="robot-float absolute -left-[458px] -top-[370px] w-[612px] h-[408px] opacity-60"
+          className="robot-float absolute -left-[200px] top-10 w-[400px] h-[300px] opacity-60"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/dd60f8e45dbc5e9321c41ce8f864ba1faf662d51"
           alt=""
-          className="robot-float absolute left-22 -top-60 w-[612px] h-[408px] opacity-60"
+          className="robot-float absolute left-10 top-20 w-[400px] h-[300px] opacity-40"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/d9bfd6da4f7ea802a85d85a40f9d6ae0eed9b4ed"
           alt=""
-          className="robot-float absolute -left-24 top-32 w-[612px] h-[408px] opacity-60"
+          className="robot-float absolute -left-10 bottom-32 w-[400px] h-[300px] opacity-40"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/178a4ea556bce9319a97f9a14ac9077e9358a5da"
           alt=""
-          className="robot-float absolute left-[506px] -top-[297px] w-[612px] h-[408px] opacity-60"
+          className="robot-float absolute right-[100px] top-20 w-[400px] h-[300px] opacity-40"
           style={{ transform: "rotate(32.395deg)" }}
         />
       </div>
