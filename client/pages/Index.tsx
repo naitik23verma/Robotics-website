@@ -33,7 +33,7 @@ export default function Index() {
         <Contact />
       </div>
       <Footer />
-      <FloatingActionButton />
+      <ChatBot />
     </div>
   );
 }
