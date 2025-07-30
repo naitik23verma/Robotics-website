@@ -119,7 +119,7 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
         <h1
           ref={titleRef}
-          className="text-white font-taviraj text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 bg-gradient-to-r from-white via-[#9CF185] to-white bg-clip-text text-transparent"
+          className="text-white font-taviraj text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
         >
           Welcome to Robotics Club – MANIT Bhopal
         </h1>
@@ -130,27 +130,6 @@ export default function Hero() {
         >
           Where Innovation Meets Engineering
         </p>
-
-        {/* CTA Buttons */}
-        <div ref={ctaRef} className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <button
-            onClick={scrollToEvents}
-            className="group bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white font-poppins font-semibold px-8 py-4 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg"
-          >
-            <span className="mr-2">🚀</span>
-            Explore Events
-            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
-          </button>
-
-          <button
-            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group border-2 border-[#9CF185] text-[#9CF185] font-poppins font-semibold px-8 py-4 rounded-full hover:bg-[#9CF185] hover:text-[#0F1B35] transition-all duration-300 text-lg"
-          >
-            <span className="mr-2">📖</span>
-            Learn More
-            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
-          </button>
-        </div>
 
         {/* Floating Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
