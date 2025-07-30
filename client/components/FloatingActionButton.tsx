@@ -33,17 +33,6 @@ export default function FloatingActionButton() {
       {/* Expanded Actions */}
       {isExpanded && (
         <div className="flex flex-col space-y-3 animate-in slide-in-from-bottom duration-300">
-          {/* Prize Collection Button */}
-          <Link
-            to="/prizes"
-            className="group bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white p-4 rounded-full shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-300 flex items-center"
-          >
-            <span className="text-xl mr-0 group-hover:mr-3 transition-all duration-300">🏆</span>
-            <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-sm font-medium">
-              Prize Collection
-            </span>
-          </Link>
-
           {/* Contact Button */}
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
