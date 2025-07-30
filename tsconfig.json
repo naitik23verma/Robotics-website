@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -40,4 +41,23 @@
     "vite.config.server.ts"
   ],
   "exclude": ["node_modules", "dist"]
+=======
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "noImplicitAny": false,
+    "noUnusedParameters": false,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": false
+  }
+>>>>>>> 0d905cba242ef562ee8e56d87a97bb59c6df89d1
 }
