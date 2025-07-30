@@ -1,10 +1,37 @@
 import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    // GSAP animations will be added here later
+    const ctx = gsap.context(() => {
+      // Animate title
+      gsap.fromTo(titleRef.current,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+      );
+
+      // Animate subtitle
+      gsap.fromTo(subtitleRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power2.out" }
+      );
+
+      // Floating animation for robot images
+      gsap.to(".robot-float", {
+        y: -20,
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+        stagger: 0.2
+      });
+    }, heroRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
