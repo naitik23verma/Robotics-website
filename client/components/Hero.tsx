@@ -5,41 +5,66 @@ export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate title
+      // Animate title with more dramatic effect
       gsap.fromTo(
         titleRef.current,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
+        { opacity: 0, y: 100, scale: 0.8 },
+        { opacity: 1, y: 0, scale: 1, duration: 1.2, ease: "power3.out" },
       );
 
       // Animate subtitle
       gsap.fromTo(
         subtitleRef.current,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1, delay: 0.4, ease: "power2.out" },
+      );
+
+      // Animate CTA buttons
+      gsap.fromTo(
+        ctaRef.current,
         { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power2.out" },
+        { opacity: 1, y: 0, duration: 0.8, delay: 0.8, ease: "power2.out" },
       );
 
       // Floating animation for robot images
       gsap.to(".robot-float", {
         y: -20,
-        duration: 3,
+        duration: 4,
         repeat: -1,
         yoyo: true,
         ease: "power1.inOut",
-        stagger: 0.2,
+        stagger: 0.3,
+      });
+
+      // Continuous rotation for main robot
+      gsap.to(".robot-rotate", {
+        rotation: 360,
+        duration: 20,
+        repeat: -1,
+        ease: "none"
       });
     }, heroRef);
 
     return () => ctx.revert();
   }, []);
 
+  // Scroll to events section
+  const scrollToEvents = () => {
+    const element = document.getElementById('events');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section
+      id="home"
       ref={heroRef}
-      className="relative h-[600px] bg-[#121C37] overflow-hidden flex items-center justify-center"
+      className="relative min-h-screen bg-gradient-to-br from-[#121C37] via-[#0F1B35] to-[#1A2B4A] overflow-hidden flex items-center justify-center"
       style={{ marginTop: "73px" }}
     >
       {/* Background decorative elements */}
