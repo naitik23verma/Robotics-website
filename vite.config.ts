@@ -14,13 +14,13 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist",
+    outDir: "dist/spa",
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ["react", "react-dom"],
           router: ["react-router-dom"],
-          animations: ["gsap"],
+          animations: ["gsap", "framer-motion"],
           ui: [
             "@radix-ui/react-accordion",
             "@radix-ui/react-dialog",
