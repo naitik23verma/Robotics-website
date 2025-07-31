@@ -6,22 +6,9 @@ export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const particlesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Create particles
-      if (particlesRef.current) {
-        for (let i = 0; i < 50; i++) {
-          const particle = document.createElement('div');
-          particle.className = 'particle absolute w-1 h-1 bg-[#9CF185] rounded-full opacity-70';
-          particle.style.left = Math.random() * 100 + '%';
-          particle.style.animationDelay = Math.random() * 10 + 's';
-          particle.style.animationDuration = (Math.random() * 5 + 5) + 's';
-          particlesRef.current.appendChild(particle);
-        }
-      }
-
       // Animate title with more dramatic effect
       gsap.fromTo(
         titleRef.current,
@@ -60,26 +47,6 @@ export default function Hero() {
         repeat: -1,
         ease: "none",
       });
-
-      // Parallax effect for background elements
-      gsap.to(".parallax-slow", {
-        y: -50,
-        duration: 20,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
-      });
-
-      gsap.to(".parallax-fast", {
-        y: -100,
-        x: 30,
-        rotation: 10,
-        duration: 15,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
-      });
-
     }, heroRef);
 
     return () => ctx.revert();
@@ -97,22 +64,16 @@ export default function Hero() {
     <section
       id="home"
       ref={heroRef}
-      className="relative min-h-screen morphing-bg overflow-hidden flex items-center justify-center"
+      className="relative min-h-screen bg-gradient-to-br from-[#121C37] via-[#0F1B35] to-[#1A2B4A] overflow-hidden flex items-center justify-center"
       style={{ marginTop: "73px" }}
     >
-      {/* Particle System */}
-      <div ref={particlesRef} className="particles absolute inset-0 pointer-events-none" />
-
-      {/* Matrix Rain Effect */}
-      <div className="matrix-rain" />
-
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         {/* Main large robot blueprint background */}
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/ae0dd919350d695f0a5d9edf530ddff17252e16f"
           alt=""
-          className="parallax-slow absolute -left-5 -top-48 w-[1368px] h-[1368px] opacity-20 robot-rotate"
+          className="absolute -left-5 -top-48 w-[1368px] h-[1368px] opacity-78"
           style={{ transform: "rotate(0.186deg)" }}
         />
 
@@ -120,7 +81,7 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/6e46b4cf75136dd5e44caaa903a48573b2a40909"
           alt=""
-          className="robot-float parallax-fast absolute right-0 top-10 w-[499px] h-[696px] opacity-30 glow-advanced"
+          className="robot-float absolute right-0 top-10 w-[499px] h-[696px] opacity-90"
           style={{ transform: "rotate(0.186deg)" }}
         />
 
@@ -128,28 +89,28 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/cf4f1aced408cc9422d231e2950986152b9dd48a"
           alt=""
-          className="robot-float parallax-slow absolute -left-[200px] top-10 w-[400px] h-[300px] opacity-20 circuit-animation"
+          className="robot-float absolute -left-[200px] top-10 w-[400px] h-[300px] opacity-60"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/dd60f8e45dbc5e9321c41ce8f864ba1faf662d51"
           alt=""
-          className="robot-float parallax-fast absolute left-10 top-20 w-[400px] h-[300px] opacity-15"
+          className="robot-float absolute left-10 top-20 w-[400px] h-[300px] opacity-40"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/d9bfd6da4f7ea802a85d85a40f9d6ae0eed9b4ed"
           alt=""
-          className="robot-float parallax-slow absolute -left-10 bottom-32 w-[400px] h-[300px] opacity-15"
+          className="robot-float absolute -left-10 bottom-32 w-[400px] h-[300px] opacity-40"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/178a4ea556bce9319a97f9a14ac9077e9358a5da"
           alt=""
-          className="robot-float parallax-fast absolute right-[100px] top-20 w-[400px] h-[300px] opacity-15 pulse-advanced"
+          className="robot-float absolute right-[100px] top-20 w-[400px] h-[300px] opacity-40"
           style={{ transform: "rotate(32.395deg)" }}
         />
       </div>
@@ -186,11 +147,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Ambient Glow Effects */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#9CF185]/10 rounded-full filter blur-3xl animate-glow-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#AC0FB8]/10 rounded-full filter blur-3xl animate-glow-pulse animation-delay-1000"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#578FD9]/5 rounded-full filter blur-3xl animate-glow-pulse animation-delay-2000"></div>
     </section>
   );
 }
