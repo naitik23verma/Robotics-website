@@ -23,8 +23,8 @@ export default function Navigation() {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   // Track scroll position and active section
@@ -74,7 +74,9 @@ export default function Navigation() {
             onClick={() => scrollToSection("home")}
           >
             <div className="relative w-12 h-12 bg-gradient-to-br from-[#9CF185] to-[#60BE58] rounded-xl flex items-center justify-center magnetic-hover ultra-smooth overflow-hidden">
-              <span className="text-[#0F1B35] font-orbitron font-bold text-lg relative z-10">RC</span>
+              <span className="text-[#0F1B35] font-orbitron font-bold text-lg relative z-10">
+                RC
+              </span>
               <div className="absolute inset-0 bg-gradient-to-br from-[#60BE58] to-[#9CF185] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 animate-glow-pulse bg-[#9CF185]/20 rounded-xl"></div>
             </div>
@@ -106,10 +108,10 @@ export default function Navigation() {
                 }`}
               >
                 <span className="relative z-10">{item.label}</span>
-                
+
                 {/* Background hover effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#9CF185]/20 to-[#60BE58]/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-xl"></div>
-                
+
                 {/* Active indicator */}
                 {activeSection === item.id && (
                   <>
@@ -117,14 +119,14 @@ export default function Navigation() {
                     <div className="absolute inset-0 animate-glow-pulse bg-[#9CF185]/5 rounded-xl"></div>
                   </>
                 )}
-                
+
                 {/* Magnetic glow effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#9CF185]/10 to-[#60BE58]/10 filter blur-md rounded-xl"></div>
                 </div>
               </button>
             ))}
-            
+
             {/* Enhanced Prize button */}
             <Link
               to="/prizes"
@@ -134,10 +136,10 @@ export default function Navigation() {
                 <span className="text-xl animate-bounce">🏆</span>
                 <span className="font-bold">Prizes</span>
               </span>
-              
+
               {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#60BE58] to-[#9CF185] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
+
               {/* Shimmer effect */}
               <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
             </Link>
@@ -159,7 +161,7 @@ export default function Navigation() {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-              
+
               {/* Glow effect for mobile button */}
               <div className="absolute inset-0 bg-[#9CF185]/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-glow-pulse"></div>
             </button>

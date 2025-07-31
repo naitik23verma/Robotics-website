@@ -179,44 +179,46 @@ export default {
         "glow-md": "0 0 20px rgba(156, 241, 133, 0.4)",
         "glow-lg": "0 0 30px rgba(156, 241, 133, 0.5)",
         "glow-xl": "0 0 40px rgba(156, 241, 133, 0.6)",
-        "neon": "0 0 5px #9CF185, 0 0 10px #9CF185, 0 0 15px #9CF185",
+        neon: "0 0 5px #9CF185, 0 0 10px #9CF185, 0 0 15px #9CF185",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "cyber-grid": "linear-gradient(rgba(156, 241, 133, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(156, 241, 133, 0.1) 1px, transparent 1px)",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "cyber-grid":
+          "linear-gradient(rgba(156, 241, 133, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(156, 241, 133, 0.1) 1px, transparent 1px)",
       },
       backgroundSize: {
-        "grid": "50px 50px",
+        grid: "50px 50px",
       },
       textShadow: {
-        "neon": "0 0 10px #9CF185",
-        "glow": "0 0 20px rgba(156, 241, 133, 0.8)",
+        neon: "0 0 10px #9CF185",
+        glow: "0 0 20px rgba(156, 241, 133, 0.8)",
       },
     },
   },
   plugins: [
-    require("tailwindcss-animate"), 
+    require("tailwindcss-animate"),
     require("@tailwindcss/line-clamp"),
-    function({ addUtilities }: any) {
+    function ({ addUtilities }: any) {
       const newUtilities = {
-        '.text-shadow-neon': {
-          textShadow: '0 0 10px #9CF185',
+        ".text-shadow-neon": {
+          textShadow: "0 0 10px #9CF185",
         },
-        '.text-shadow-glow': {
-          textShadow: '0 0 20px rgba(156, 241, 133, 0.8)',
+        ".text-shadow-glow": {
+          textShadow: "0 0 20px rgba(156, 241, 133, 0.8)",
         },
-        '.perspective-1000': {
-          perspective: '1000px',
+        ".perspective-1000": {
+          perspective: "1000px",
         },
-        '.transform-style-3d': {
-          transformStyle: 'preserve-3d',
+        ".transform-style-3d": {
+          transformStyle: "preserve-3d",
         },
-        '.backface-hidden': {
-          backfaceVisibility: 'hidden',
+        ".backface-hidden": {
+          backfaceVisibility: "hidden",
         },
-      }
-      addUtilities(newUtilities)
-    }
+      };
+      addUtilities(newUtilities);
+    },
   ],
 } satisfies Config;
