@@ -85,32 +85,32 @@ export default function Hero() {
           style={{ transform: "rotate(0.186deg)" }}
         />
 
-        {/* Smaller decorative robot elements */}
+        {/* Smaller decorative robot elements positioned at top as per Figma */}
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/cf4f1aced408cc9422d231e2950986152b9dd48a"
           alt=""
-          className="robot-float absolute -left-[200px] top-10 w-[400px] h-[300px] opacity-60"
+          className="robot-float absolute -left-[300px] -top-[200px] w-[450px] h-[300px] opacity-60"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/dd60f8e45dbc5e9321c41ce8f864ba1faf662d51"
           alt=""
-          className="robot-float absolute left-10 top-20 w-[400px] h-[300px] opacity-40"
+          className="robot-float absolute left-[60px] -top-[150px] w-[450px] h-[300px] opacity-60"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/d9bfd6da4f7ea802a85d85a40f9d6ae0eed9b4ed"
           alt=""
-          className="robot-float absolute -left-10 bottom-32 w-[400px] h-[300px] opacity-40"
+          className="robot-float absolute -left-[80px] top-[100px] w-[450px] h-[300px] opacity-60"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/178a4ea556bce9319a97f9a14ac9077e9358a5da"
           alt=""
-          className="robot-float absolute right-[100px] top-20 w-[400px] h-[300px] opacity-40"
+          className="robot-float absolute right-[300px] -top-[180px] w-[450px] h-[300px] opacity-60"
           style={{ transform: "rotate(32.395deg)" }}
         />
       </div>
