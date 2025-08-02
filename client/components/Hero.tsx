@@ -73,7 +73,7 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/ae0dd919350d695f0a5d9edf530ddff17252e16f"
           alt=""
-          className="absolute -left-20 -bottom-64 w-[800px] h-[800px] opacity-60"
+          className="absolute -left-20 -bottom-80 w-[800px] h-[800px] opacity-60"
           style={{ transform: "rotate(0.186deg)" }}
         />
 
