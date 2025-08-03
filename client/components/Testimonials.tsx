@@ -222,7 +222,7 @@ export default function Testimonials() {
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/80a18452a4ecf699b1d02202b37519eb50ebe39f"
         alt=""
-        className="absolute -left-20 -top-7 w-[277px] h-[156px] opacity-30"
+        className="absolute -left-30 -top--10 w-[277px] h-[156px] opacity-30"
       />
 
       <div className="relative z-10 w-full px-4 lg:px-8 xl:px-12 max-w-7xl mx-auto">

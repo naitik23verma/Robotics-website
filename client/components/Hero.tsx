@@ -72,7 +72,7 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/ae0dd919350d695f0a5d9edf530ddff17252e16f"
           alt=""
-          className="absolute -left-20 -bottom-80 w-[999px] h-[800px] opacity-60"
+          className="absolute -left--20 -bottom-80 w-[1500px] h-[900px] opacity-60"
           style={{ transform: "rotate(0.186deg)" }}
         />
 
@@ -102,14 +102,14 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/dd60f8e45dbc5e9321c41ce8f864ba1faf662d51"
           alt=""
-          className="robot-float absolute -left-[700px] top-[0px] w-[500px] h-[500px] opacity-200"
+          className="robot-float absolute -left-[800px] top-[200px] w-[500px] h-[500px] opacity-200"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/dd60f8e45dbc5e9321c41ce8f864ba1faf662d51"
           alt=""
-          className="robot-float absolute left-[700px] -top-[0px] w-[500px] h-[500px] opacity-200"
+          className="robot-float absolute left-[700px] -top-[00px] w-[500px] h-[500px] opacity-200"
           style={{ transform: "rotate(32.395deg)" }}
         />
       </div>

@@ -17,13 +17,13 @@ export default function PastEvents() {
   return (
     <section className="bg-[#0F1B35] py-16 relative overflow-hidden">
       {/* Background blur effect */}
-      <div className="absolute left-14 top-72 w-[980px] h-64 bg-[#8AD67B] opacity-39 blur-[50px]"></div>
+      <div className="absolute left-14 bottom-92 w-[980px] h-64 bg-[#8AD67B] opacity-10 blur-[50px]"></div>
 
       {/* Decorative robot image */}
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/dc954d80bb382046a768c17e994fc2185e53642a"
         alt=""
-        className="absolute right-0 bottom-0 w-[612px] h-[408px] opacity-40"
+        className="absolute right-200 bottom-200 w-[400px] h-[408px] opacity-100"
       />
 
       <div className="relative z-10 w-full px-4 lg:px-8 xl:px-12 max-w-7xl mx-auto">

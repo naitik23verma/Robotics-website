@@ -1,6 +1,6 @@
 export default function Gallery() {
   const galleryItems = [
-    "https://api.builder.io/api/v1/image/assets/TEMP/44e6b96006c2063186188e1cdb7da46198c2e1a6",
+    null,
     null,
     null,
     null,

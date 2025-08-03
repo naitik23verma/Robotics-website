@@ -48,7 +48,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="bg-[#0F1B35] py-16 relative overflow-hidden">
+    <section className="bg-[#0F1B35] py-40 relative overflow-hidden">
       {/* Background blur effects */}
       <div className="absolute right-0 top-0 w-52 h-[426px] bg-[#4A9244] opacity-53 blur-[100px] rounded-full"></div>
 
@@ -58,18 +58,18 @@ export default function Projects() {
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/494adaa18d29a7b38394519ef3afb10ede2ddaa0"
         alt=""
-        className="absolute -left-24 -top-10 w-[1325px] h-[735px] opacity-60"
+        className="absolute -left-24 -bottom-20 w-[1325px] h-[735px] opacity-60"
       />
 
       {/* Decorative robot icon */}
       <img
         src="https://api.builder.io/api/v1/image/assets/TEMP/be3d56e4868fe021516169bdb957e5c9be275127"
         alt=""
-        className="absolute top-0 left-96 w-[89px] h-[151px]"
+        className="absolute top-20 left-96 w-[89px] h-[151px]"
       />
 
       <div className="relative z-10 w-full px-4 lg:px-8 xl:px-12 max-w-7xl mx-auto">
-        <h2 className="text-[#9CF185] font-poppins text-2xl md:text-3xl font-bold text-center mb-16">
+        <h2 className="text-[#9CF185] font-poppins text-2xl md:text-3xl font-bold text-center mb-40">
           Projects by Our Team
         </h2>
 
