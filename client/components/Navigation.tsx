@@ -62,8 +62,8 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "glass-morphism shadow-glow-md border-b border-[#9CF185]/30 backdrop-blur-xl"
-          : "bg-[#121C37]/80 border-b border-gray-300/20 backdrop-blur-sm"
+          ? "bg-[#121C37]/90 backdrop-blur-xl border-b border-[#9CF185]/30 shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 lg:px-16">
