@@ -72,7 +72,7 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/ae0dd919350d695f0a5d9edf530ddff17252e16f"
           alt=""
-          className="absolute -left-20 -bottom-80 w-[950px] h-[800px] opacity-60"
+          className="absolute -left-20 -bottom-80 w-[999px] h-[800px] opacity-60"
           style={{ transform: "rotate(0.186deg)" }}
         />
 
@@ -80,7 +80,7 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/6e46b4cf75136dd5e44caaa903a48573b2a40909"
           alt=""
-          className="robot-float absolute right-0 top-10 w-[499px] h-[696px] opacity-90"
+          className="robot-float absolute right-0 top-10 w-[499px] h-[696px] mt-12 opacity-90"
           style={{ transform: "rotate(0.186deg)" }}
         />
 
@@ -88,28 +88,28 @@ export default function Hero() {
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/cf4f1aced408cc9422d231e2950986152b9dd48a"
           alt=""
-          className="robot-float absolute -left-[200px] -top-[100px] w-[400px] h-[300px] opacity-90"
+          className="robot-float absolute -left-[200px] -top-[0px] w-[500px] h-[400px] opacity-200"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/dd60f8e45dbc5e9321c41ce8f864ba1faf662d51"
           alt=""
-          className="robot-float absolute left-[200px] -top-[80px] w-[400px] h-[300px] opacity-90"
+          className="robot-float absolute left-[200px] -top-[0px] w-[500px] h-[400px] opacity-200"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/d9bfd6da4f7ea802a85d85a40f9d6ae0eed9b4ed"
           alt=""
-          className="robot-float absolute -left-[50px] top-[120px] w-[400px] h-[300px] opacity-80"
+          className="robot-float absolute -left-[50px] top-[0px] w-[500px] h-[400px] opacity-200"
           style={{ transform: "rotate(32.581deg)" }}
         />
 
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/178a4ea556bce9319a97f9a14ac9077e9358a5da"
           alt=""
-          className="robot-float absolute right-[200px] -top-[100px] w-[400px] h-[300px] opacity-90"
+          className="robot-float absolute left-[550px] -top-[0px] w-[500px] h-[400px] opacity-200"
           style={{ transform: "rotate(32.395deg)" }}
         />
       </div>
