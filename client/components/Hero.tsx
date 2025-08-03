@@ -64,8 +64,7 @@ export default function Hero() {
     <section
       id="home"
       ref={heroRef}
-      className="relative min-h-screen bg-gradient-to-br from-[#121C37] via-[#0F1B35] to-[#1A2B4A] overflow-hidden flex items-center justify-center"
-      style={{ marginTop: "73px" }}
+      className="relative min-h-screen bg-gradient-to-br from-[#121C37] via-[#0F1B35] to-[#1A2B4A] overflow-hidden flex items-center justify-center pt-20"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0">
