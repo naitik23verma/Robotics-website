@@ -90,8 +90,8 @@ export default function AboutUs() {
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#AC0FB8]/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="relative z-10 w-full px-4 lg:px-16">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 w-full px-4 lg:px-8 xl:px-12">
+        <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center max-w-7xl mx-auto">
           {/* Enhanced Image Section */}
           <div ref={imageRef} className="relative">
             <div className="bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-md h-80 rounded-2xl border border-white/20 overflow-hidden group">
