@@ -10,7 +10,7 @@ export const imageConfig = {
       position: "absolute -left-20 -bottom-80",
       size: "w-[950px] h-[800px]",
       opacity: "opacity-60",
-      transform: "rotate(0.186deg)"
+      transform: "rotate(0.186deg)",
     },
     rightSide: {
       url: "https://api.builder.io/api/v1/image/assets/TEMP/6e46b4cf75136dd5e44caaa903a48573b2a40909",
@@ -19,7 +19,7 @@ export const imageConfig = {
       position: "absolute right-0 top-10",
       size: "w-[499px] h-[696px]",
       opacity: "opacity-90",
-      transform: "rotate(0.186deg)"
+      transform: "rotate(0.186deg)",
     },
     topLeft: {
       url: "https://api.builder.io/api/v1/image/assets/TEMP/cf4f1aced408cc9422d231e2950986152b9dd48a",
@@ -28,7 +28,7 @@ export const imageConfig = {
       position: "absolute -left-[200px] -top-[100px]",
       size: "w-[400px] h-[300px]",
       opacity: "opacity-90",
-      transform: "rotate(32.581deg)"
+      transform: "rotate(32.581deg)",
     },
     topCenter: {
       url: "https://api.builder.io/api/v1/image/assets/TEMP/dd60f8e45dbc5e9321c41ce8f864ba1faf662d51",
@@ -37,7 +37,7 @@ export const imageConfig = {
       position: "absolute left-[200px] -top-[80px]",
       size: "w-[400px] h-[300px]",
       opacity: "opacity-90",
-      transform: "rotate(32.581deg)"
+      transform: "rotate(32.581deg)",
     },
     centerLeft: {
       url: "https://api.builder.io/api/v1/image/assets/TEMP/d9bfd6da4f7ea802a85d85a40f9d6ae0eed9b4ed",
@@ -46,7 +46,7 @@ export const imageConfig = {
       position: "absolute -left-[50px] top-[120px]",
       size: "w-[400px] h-[300px]",
       opacity: "opacity-80",
-      transform: "rotate(32.581deg)"
+      transform: "rotate(32.581deg)",
     },
     topRight: {
       url: "https://api.builder.io/api/v1/image/assets/TEMP/178a4ea556bce9319a97f9a14ac9077e9358a5da",
@@ -55,8 +55,8 @@ export const imageConfig = {
       position: "absolute right-[200px] -top-[100px]",
       size: "w-[400px] h-[300px]",
       opacity: "opacity-90",
-      transform: "rotate(32.395deg)"
-    }
+      transform: "rotate(32.395deg)",
+    },
   },
   testimonials: {
     background: {
@@ -65,8 +65,8 @@ export const imageConfig = {
       alt: "Testimonials background decoration",
       position: "absolute bottom-10 right-10",
       size: "w-[150px] h-[200px]",
-      opacity: "opacity-60"
-    }
+      opacity: "opacity-60",
+    },
   },
   projects: {
     background1: {
@@ -75,7 +75,7 @@ export const imageConfig = {
       alt: "Projects background element 1",
       position: "absolute top-10 right-10",
       size: "w-[150px] h-[200px]",
-      opacity: "opacity-60"
+      opacity: "opacity-60",
     },
     background2: {
       url: "https://api.builder.io/api/v1/image/assets/TEMP/be3d56e4868fe021516169bdb957e5c9be275127",
@@ -83,8 +83,8 @@ export const imageConfig = {
       alt: "Projects background element 2",
       position: "absolute bottom-10 left-10",
       size: "w-[150px] h-[200px]",
-      opacity: "opacity-60"
-    }
+      opacity: "opacity-60",
+    },
   },
   events: {
     background: {
@@ -93,8 +93,8 @@ export const imageConfig = {
       alt: "Events background decoration",
       position: "absolute top-10 left-10",
       size: "w-[150px] h-[200px]",
-      opacity: "opacity-60"
-    }
+      opacity: "opacity-60",
+    },
   },
   achievements: {
     icon: {
@@ -103,8 +103,8 @@ export const imageConfig = {
       alt: "Achievement decoration icon",
       position: "absolute top-10 left-80",
       size: "w-[90px] h-[154px]",
-      opacity: "opacity-60"
-    }
+      opacity: "opacity-60",
+    },
   },
   footer: {
     background1: {
@@ -113,7 +113,7 @@ export const imageConfig = {
       alt: "Footer background element 1",
       position: "absolute top-0 left-0",
       size: "w-[150px] h-[200px]",
-      opacity: "opacity-30"
+      opacity: "opacity-30",
     },
     background2: {
       url: "https://api.builder.io/api/v1/image/assets/TEMP/4b9574484a3b56f17db1373b3267af0814b0c59b",
@@ -121,7 +121,7 @@ export const imageConfig = {
       alt: "Footer background element 2",
       position: "absolute top-10 right-20",
       size: "w-[150px] h-[200px]",
-      opacity: "opacity-30"
+      opacity: "opacity-30",
     },
     background3: {
       url: "https://api.builder.io/api/v1/image/assets/TEMP/84366b6c6f3ca33deccc2841234afc3e374289ab",
@@ -129,8 +129,8 @@ export const imageConfig = {
       alt: "Footer background element 3",
       position: "absolute bottom-0 left-20",
       size: "w-[150px] h-[200px]",
-      opacity: "opacity-30"
-    }
+      opacity: "opacity-30",
+    },
   },
   gallery: {
     item1: {
@@ -139,19 +139,26 @@ export const imageConfig = {
       alt: "Gallery showcase item",
       position: "relative",
       size: "w-full h-64",
-      opacity: "opacity-100"
-    }
-  }
+      opacity: "opacity-100",
+    },
+  },
 };
 
 // Helper function to get image source (local if available, fallback to URL)
-export const getImageSrc = (section: keyof typeof imageConfig, image: string, useLocal = false) => {
+export const getImageSrc = (
+  section: keyof typeof imageConfig,
+  image: string,
+  useLocal = false,
+) => {
   const config = imageConfig[section][image];
   return useLocal ? config.local : config.url;
 };
 
 // Helper function to get all image classes for an image
-export const getImageClasses = (section: keyof typeof imageConfig, image: string) => {
+export const getImageClasses = (
+  section: keyof typeof imageConfig,
+  image: string,
+) => {
   const config = imageConfig[section][image];
   return `${config.position} ${config.size} ${config.opacity}`;
 };

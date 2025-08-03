@@ -1,9 +1,11 @@
 # Image Management Guide for Robotics Club MANIT Website
 
 ## Overview
+
 All images used throughout the website have been cataloged and organized for easy management and positioning control.
 
 ## Folder Structure Created
+
 ```
 public/images/
 ├── hero/                 # Hero section robot images (6 images)
@@ -19,21 +21,27 @@ public/images/
 ## Key Files Created
 
 ### 1. `/public/images/README.md`
+
 Complete documentation of all images with:
+
 - Current URLs being used
 - Local file naming conventions
 - Positioning classes for each image
 - Instructions for updating image paths
 
 ### 2. `/client/config/images.ts`
+
 TypeScript configuration file containing:
+
 - Centralized image management
 - Position, size, and opacity settings for each image
 - Helper functions to switch between local and remote images
 - Easy way to modify image properties
 
 ### 3. `/scripts/download-images.js`
+
 Node.js script to download all images locally:
+
 ```bash
 node scripts/download-images.js
 ```
@@ -41,6 +49,7 @@ node scripts/download-images.js
 ## Image Position Control
 
 ### Hero Section Robot Images
+
 The Hero section contains 6 robot images with specific positioning:
 
 1. **Main Background Robot** (`robot-main-bg.png`)
@@ -76,59 +85,70 @@ The Hero section contains 6 robot images with specific positioning:
 ## How to Modify Image Positions
 
 ### Method 1: Direct Component Editing
+
 Edit the component files directly:
+
 - `/client/components/Hero.tsx` - for hero section images
 - `/client/components/Projects.tsx` - for project images
 - etc.
 
 ### Method 2: Using the Configuration File
+
 1. Modify positions in `/client/config/images.ts`
 2. Import and use the helper functions in your components:
 
 ```tsx
-import { imageConfig, getImageClasses } from '../config/images';
+import { imageConfig, getImageClasses } from "../config/images";
 
 // Usage example
 <img
   src={imageConfig.hero.mainBackground.url}
-  className={getImageClasses('hero', 'mainBackground')}
+  className={getImageClasses("hero", "mainBackground")}
   style={{ transform: imageConfig.hero.mainBackground.transform }}
-/>
+/>;
 ```
 
 ## Quick Position Adjustments
 
 ### To move images left/right:
+
 - Change `left-[Xpx]` or `right-[Xpx]` values
 - Use negative values for positioning outside viewport
 
 ### To move images up/down:
+
 - Change `top-[Xpx]` or `bottom-[Xpx]` values
 - Use negative values for positioning above viewport
 
 ### To resize images:
+
 - Modify `w-[Xpx] h-[Xpx]` values
 - Maintain aspect ratio for best results
 
 ### To adjust visibility:
+
 - Change `opacity-X` values (10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
 
 ## Example Position Changes
 
 ```tsx
 // Move main robot further left and down
-className="absolute -left-[40px] -bottom-[100px] w-[950px] h-[800px] opacity-60"
+className =
+  "absolute -left-[40px] -bottom-[100px] w-[950px] h-[800px] opacity-60";
 
 // Make top robots more visible
-className="robot-float absolute -left-[150px] -top-[80px] w-[350px] h-[250px] opacity-95"
+className =
+  "robot-float absolute -left-[150px] -top-[80px] w-[350px] h-[250px] opacity-95";
 
 // Adjust right side robot position
-className="robot-float absolute right-[20px] top-[50px] w-[450px] h-[650px] opacity-85"
+className =
+  "robot-float absolute right-[20px] top-[50px] w-[450px] h-[650px] opacity-85";
 ```
 
 ## Next Steps
 
 1. **Download Images Locally** (Optional):
+
    ```bash
    node scripts/download-images.js
    ```
