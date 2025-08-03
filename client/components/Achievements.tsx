@@ -94,7 +94,7 @@ export default function Achievements() {
         className="absolute top-10 left-80 w-[90px] h-[154px] opacity-60"
       />
 
-      <div className="relative z-10 w-full px-4 lg:px-20">
+      <div className="relative z-10 w-full px-4 lg:px-8 xl:px-12 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-[#9CF185] to-[#60BE58] bg-clip-text text-transparent font-poppins">
