@@ -131,7 +131,7 @@ export default function Hero() {
         </p>
 
         {/* Floating Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 w-full max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:scale-105 transition-transform duration-300">
             <div className="text-3xl font-bold text-[#9CF185] mb-2">500+</div>
             <div className="text-white font-poppins">Active Members</div>
