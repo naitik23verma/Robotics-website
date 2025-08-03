@@ -115,7 +115,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
+      <div className="relative z-10 text-center w-full px-8 lg:px-16">
         <h1
           ref={titleRef}
           className="text-white font-taviraj text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
