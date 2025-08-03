@@ -118,17 +118,9 @@ export default function Hero() {
       <div className="relative z-10 text-center w-full px-8 lg:px-16">
         <h1
           ref={titleRef}
-          className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.9] mb-8 tracking-tight"
+          className="text-white font-taviraj text-3xl md:text-4xl lg:text-5xl font-bold leading-[1] mb-6 text-center"
         >
-          <span className="block bg-gradient-to-r from-white via-[#9CF185] to-white bg-clip-text text-transparent font-orbitron">
-            WELCOME TO
-          </span>
-          <span className="block bg-gradient-to-r from-[#9CF185] to-[#60BE58] bg-clip-text text-transparent font-orbitron mt-2">
-            ROBOTICS CLUB
-          </span>
-          <span className="block text-white font-space text-2xl md:text-4xl lg:text-5xl font-normal mt-4 tracking-wide">
-            MANIT BHOPAL
-          </span>
+          Welcome to Robotics Club – MANIT Bhopal
         </h1>
 
         <p
