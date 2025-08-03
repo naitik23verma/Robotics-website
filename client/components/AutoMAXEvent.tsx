@@ -20,7 +20,10 @@ export default function AutoMAXEvent() {
   };
 
   return (
-    <section id="events" className="bg-[#0F1B35] py-20 relative overflow-hidden">
+    <section
+      id="events"
+      className="bg-[#0F1B35] py-20 relative overflow-hidden"
+    >
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-32 h-32 bg-[#9CF185] rounded-full filter blur-3xl"></div>
@@ -30,7 +33,10 @@ export default function AutoMAXEvent() {
       <div className="relative z-10 w-full px-4 lg:px-20">
         <div className="text-center mb-16">
           <h2 className="text-white font-poppins text-4xl md:text-5xl font-bold mb-4">
-            Upcoming Event: <span className="bg-gradient-to-r from-[#9CF185] to-[#60BE58] bg-clip-text text-transparent">AutoMAX</span>
+            Upcoming Event:{" "}
+            <span className="bg-gradient-to-r from-[#9CF185] to-[#60BE58] bg-clip-text text-transparent">
+              AutoMAX
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] mx-auto rounded-full"></div>
         </div>
@@ -60,7 +66,7 @@ export default function AutoMAXEvent() {
               onClick={handleRegistration}
               disabled={isRegistering || registrationSuccess}
               className={`group bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white font-poppins font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl disabled:opacity-70 disabled:cursor-not-allowed ${
-                isRegistering ? 'animate-pulse' : ''
+                isRegistering ? "animate-pulse" : ""
               }`}
             >
               {isRegistering ? (
@@ -77,7 +83,9 @@ export default function AutoMAXEvent() {
                 <div className="flex items-center">
                   <span className="mr-2">🎯</span>
                   Register Now
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">
+                    →
+                  </span>
                 </div>
               )}
             </button>

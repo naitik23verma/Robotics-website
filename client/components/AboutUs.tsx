@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,22 +13,26 @@ export default function AboutUs() {
   const slides = [
     {
       title: "Innovation & Excellence",
-      content: "The MANIT Robotics Club is a hub of innovation where students explore cutting-edge robotics technologies, develop groundbreaking projects, and push the boundaries of engineering excellence. Our club has been at the forefront of robotics education for over a decade."
+      content:
+        "The MANIT Robotics Club is a hub of innovation where students explore cutting-edge robotics technologies, develop groundbreaking projects, and push the boundaries of engineering excellence. Our club has been at the forefront of robotics education for over a decade.",
     },
     {
       title: "Learning & Growth",
-      content: "We provide hands-on experience with the latest robotics tools and technologies. From Arduino programming to AI integration, our members gain practical skills that prepare them for successful careers in robotics and automation industries."
+      content:
+        "We provide hands-on experience with the latest robotics tools and technologies. From Arduino programming to AI integration, our members gain practical skills that prepare them for successful careers in robotics and automation industries.",
     },
     {
       title: "Community & Impact",
-      content: "Our club is more than just technology - we're a community of passionate innovators working together to solve real-world problems through robotics. We organize workshops, competitions, and outreach programs to inspire the next generation of engineers."
-    }
+      content:
+        "Our club is more than just technology - we're a community of passionate innovators working together to solve real-world problems through robotics. We organize workshops, competitions, and outreach programs to inspire the next generation of engineers.",
+    },
   ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animate content on scroll
-      gsap.fromTo(contentRef.current,
+      gsap.fromTo(
+        contentRef.current,
         { x: -100, opacity: 0 },
         {
           x: 0,
@@ -39,12 +43,13 @@ export default function AboutUs() {
             trigger: sectionRef.current,
             start: "top 70%",
             end: "bottom 30%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
 
-      gsap.fromTo(imageRef.current,
+      gsap.fromTo(
+        imageRef.current,
         { x: 100, opacity: 0 },
         {
           x: 0,
@@ -56,9 +61,9 @@ export default function AboutUs() {
             trigger: sectionRef.current,
             start: "top 70%",
             end: "bottom 30%",
-            toggleActions: "play none none reverse"
-          }
-        }
+            toggleActions: "play none none reverse",
+          },
+        },
       );
     }, sectionRef);
 
@@ -74,7 +79,10 @@ export default function AboutUs() {
   };
 
   return (
-    <section ref={sectionRef} className="relative bg-[#0F1B35] py-20 overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative bg-[#0F1B35] py-20 overflow-hidden"
+    >
       {/* Enhanced background with animated gradients */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#1A2B4A]/50 to-[#0F1B35]/80"></div>
@@ -133,7 +141,9 @@ export default function AboutUs() {
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      currentSlide === index ? 'bg-[#9CF185] scale-125' : 'bg-white/30'
+                      currentSlide === index
+                        ? "bg-[#9CF185] scale-125"
+                        : "bg-white/30"
                     }`}
                   />
                 ))}
@@ -157,12 +167,18 @@ export default function AboutUs() {
 
             {/* CTA Button */}
             <button
-              onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("events")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className="group bg-gradient-to-r from-[#AC0FB8] to-[#578FD9] text-white font-poppins font-semibold px-8 py-4 rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <span className="mr-2">🚀</span>
               Join Our Community
-              <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block">→</span>
+              <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200 inline-block">
+                →
+              </span>
             </button>
           </div>
         </div>
