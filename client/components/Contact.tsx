@@ -44,7 +44,7 @@ export default function Contact() {
       {/* Background blur effect */}
       <div className="absolute right-[537px] top-9 w-[517px] h-[413px] bg-[#34643F] opacity-80 blur-[50px]"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-20">
+      <div className="relative z-10 w-full px-4 lg:px-20">
         <h2 className="text-[#9CF185] font-poppins text-3xl font-bold text-center mb-16">
           Contact Us
         </h2>
