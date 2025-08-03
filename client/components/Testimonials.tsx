@@ -225,7 +225,7 @@ export default function Testimonials() {
         className="absolute -left-20 -top-7 w-[277px] h-[156px] opacity-30"
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-20">
+      <div className="relative z-10 w-full px-4 lg:px-20">
         {/* Enhanced Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
