@@ -10,7 +10,7 @@ export default function Gallery() {
 
   return (
     <section className="bg-[#0F1B35] py-16">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <div className="w-full px-4 lg:px-8">
         <h2 className="text-[#9CF185] font-roboto text-4xl font-bold text-center mb-16">
           Gallery Highlights
         </h2>
