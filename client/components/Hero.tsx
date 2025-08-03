@@ -115,7 +115,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center w-full px-8 lg:px-16">
+      <div className="relative z-10 text-center w-full px-4 lg:px-8 xl:px-12">
         <h1
           ref={titleRef}
           className="text-white font-taviraj text-3xl md:text-4xl lg:text-5xl font-bold leading-[1] mb-6 text-center"
@@ -125,13 +125,13 @@ export default function Hero() {
 
         <p
           ref={subtitleRef}
-          className="text-gray-200 font-montserrat text-xl md:text-3xl font-semibold mb-12 max-w-3xl mx-auto"
+          className="text-gray-200 font-montserrat text-xl md:text-3xl font-semibold mb-12 max-w-4xl mx-auto"
         >
           Where Innovation Meets Engineering
         </p>
 
         {/* Floating Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 w-full max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 w-full max-w-7xl mx-auto px-4 lg:px-8">
           <div className="bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-6 hover:scale-105 transition-transform duration-300">
             <div className="text-3xl font-bold text-[#9CF185] mb-2">500+</div>
             <div className="text-white font-poppins">Active Members</div>
