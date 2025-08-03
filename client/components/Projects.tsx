@@ -68,7 +68,7 @@ export default function Projects() {
         className="absolute top-0 left-96 w-[89px] h-[151px]"
       />
 
-      <div className="relative z-10 w-full px-4 lg:px-20">
+      <div className="relative z-10 w-full px-4 lg:px-8 xl:px-12 max-w-7xl mx-auto">
         <h2 className="text-[#9CF185] font-poppins text-2xl md:text-3xl font-bold text-center mb-16">
           Projects by Our Team
         </h2>
