@@ -30,7 +30,7 @@ export default function AutoMAXEvent() {
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#AC0FB8] rounded-full filter blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 w-full px-4 lg:px-20">
+      <div className="relative z-10 w-full px-4 lg:px-8 xl:px-12 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-white font-poppins text-4xl md:text-5xl font-bold mb-4">
             Upcoming Event:{" "}
