@@ -27,7 +27,7 @@ export default function Footer() {
         className="absolute -left-[466px] top-[758px] w-[612px] h-[408px]"
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-20 py-12">
+      <div className="relative z-10 w-full px-4 lg:px-20 py-12">
         {/* Main footer content */}
         <div className="grid lg:grid-cols-4 gap-8 mb-16">
           {/* Logo section */}
