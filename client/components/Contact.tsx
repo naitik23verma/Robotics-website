@@ -125,11 +125,20 @@ export default function Contact() {
                   Welcome {formData.isMANITStudent ? "MANIT Student" : "Member"}
                   !
                 </h3>
-                <p className="text-white font-poppins text-sm">
+                <p className="text-white font-poppins text-sm mb-4">
                   {formData.isMANITStudent
                     ? "Free registration available for MANIT students"
                     : "Thank you for being a member"}
                 </p>
+
+                {/* Prizes Access Button */}
+                <Link
+                  to="/prizes"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#9CF185] to-[#60BE58] text-[#0F1B35] px-6 py-3 rounded-lg font-bold hover:scale-105 transition-all duration-300 hover:shadow-lg"
+                >
+                  <span className="text-xl animate-bounce">🏆</span>
+                  <span>View Prizes & Competitions</span>
+                </Link>
               </div>
             )}
 
