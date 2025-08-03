@@ -126,23 +126,6 @@ export default function Navigation() {
                 </div>
               </button>
             ))}
-
-            {/* Enhanced Prize button */}
-            <Link
-              to="/prizes"
-              className="relative ml-4 text-base font-medium font-space transition-all duration-500 hover:scale-105 bg-gradient-to-r from-[#9CF185] to-[#60BE58] text-[#0F1B35] px-6 py-3 rounded-2xl hover:shadow-glow-lg group overflow-hidden magnetic-hover"
-            >
-              <span className="relative z-10 flex items-center space-x-2">
-                <span className="text-xl animate-bounce">🏆</span>
-                <span className="font-bold">Prizes</span>
-              </span>
-
-              {/* Animated background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#60BE58] to-[#9CF185] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-              {/* Shimmer effect */}
-              <div className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-            </Link>
           </div>
 
           {/* Enhanced Mobile menu button */}
