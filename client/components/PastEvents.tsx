@@ -26,7 +26,7 @@ export default function PastEvents() {
         className="absolute right-0 bottom-0 w-[612px] h-[408px] opacity-40"
       />
 
-      <div className="relative z-10 w-full px-4 lg:px-20">
+      <div className="relative z-10 w-full px-4 lg:px-8 xl:px-12 max-w-7xl mx-auto">
         <h2 className="text-[#9CF185] font-poppins text-3xl font-bold text-center mb-16">
           Past Events & Competitions
         </h2>
